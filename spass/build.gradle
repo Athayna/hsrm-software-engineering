@@ -1,22 +1,28 @@
+// Wir bauen eine JavaFX (Java-)Application mit der Hauptklasse (mit main()) „FxAmpel“
 plugins {
-	id 'org.springframework.boot' version '2.7.0'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.12'
+}
+mainClassName = "de.hsrm.mi.swt.Ampel"
+
+// Konfiguration des JavaFX-Plugins: Version und benötigte Module
+javafx {
+    // version = "17"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
-group = 'de.hsrm.mi.swt'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
-
-repositories {
-	mavenCentral()
+// Abzufragendes Internet-Repository für Bibliotheken (z.B. JavaFX)
+repositories { 
+    mavenCentral() 
 }
 
+// Abhängigkeiten (benötigte und einzubindende Bibliotheken)
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly    'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
+// Initialisierung für JUnit-Testing
+test {
+    useJUnitPlatform()
 }
