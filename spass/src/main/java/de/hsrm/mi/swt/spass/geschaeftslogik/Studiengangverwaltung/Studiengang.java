@@ -1,12 +1,13 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.Studiengangverwaltung;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Studiengang {
+public class Studiengang{
 
     private String name;
     private int cp;

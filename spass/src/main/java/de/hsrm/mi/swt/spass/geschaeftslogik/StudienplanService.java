@@ -2,13 +2,10 @@ package de.hsrm.mi.swt.spass.geschaeftslogik;
 
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studiengangverwaltung.Studiengang;
 
-public class Studienplaner {
+public interface StudienplanService {
 
-    private Studiengang studiengang;
-
-
-    public Studienplaner(){
-
-    }
+    public Studiengang studienplanLaden();
+    
+    public void studiengangSpeichern();
     
 }

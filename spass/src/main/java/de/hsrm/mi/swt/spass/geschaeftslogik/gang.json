@@ -1,0 +1,344 @@
+{
+    "name": "Medieninformatik",
+    "cp": 180,
+    "semanzahl": 7,
+    "abschluss": "Darfst den Gong hauen",
+    "semester": [
+        {
+            "zahl": 1,
+            "cp": 30,
+            "abgeschlossen": {
+                "name": "",
+                "value": false,
+                "valid": true
+            },
+            "module": [
+                {
+                    "name": "Mathe1",
+                    "cp": 5,
+                    "bestanden": {
+                        "name": "",
+                        "value": false,
+                        "valid": true
+                    },
+                    "note": {
+                        "name": "",
+                        "value": 0.0,
+                        "valid": true
+                    },
+                    "geforderteKompetenzen": [
+                        ""
+                    ],
+                    "kompetenzen": [
+                        ""
+                    ],
+                    "veranst": [
+                        {
+                            "name": "Mathe1 Vorlesung",
+                            "cp": 5,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        },
+                        {
+                            "name": "Mathe1 Übung",
+                            "cp": 0,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        }
+                    ],
+                    "verfuegbar": "WiSe",
+                    "orginalSemester": 1
+                },
+                {
+                    "name": "Programmieren1",
+                    "cp": 5,
+                    "bestanden": {
+                        "name": "",
+                        "value": false,
+                        "valid": true
+                    },
+                    "note": {
+                        "name": "",
+                        "value": 0.0,
+                        "valid": true
+                    },
+                    "geforderteKompetenzen": [
+                        ""
+                    ],
+                    "kompetenzen": [
+                        ""
+                    ],
+                    "veranst": [
+                        {
+                            "name": "Prog1 Praktikum",
+                            "cp": 2,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        },
+                        {
+                            "name": "Prog1 Vorlesung",
+                            "cp": 3,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        }
+                    ],
+                    "verfuegbar": "WiSe",
+                    "orginalSemester": 1
+                },
+                {
+                    "name": "Eges",
+                    "cp": 5,
+                    "bestanden": {
+                        "name": "",
+                        "value": false,
+                        "valid": true
+                    },
+                    "note": {
+                        "name": "",
+                        "value": 0.0,
+                        "valid": true
+                    },
+                    "geforderteKompetenzen": [
+                        ""
+                    ],
+                    "kompetenzen": [
+                        ""
+                    ],
+                    "veranst": [
+                        {
+                            "name": "EGES Praktikum",
+                            "cp": 2,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        },
+                        {
+                            "name": "EGES Vorlesung",
+                            "cp": 3,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        }
+                    ],
+                    "verfuegbar": "WiSe",
+                    "orginalSemester": 1
+                },
+                {
+                    "name": "Medieninformatik",
+                    "cp": 5,
+                    "bestanden": {
+                        "name": "",
+                        "value": false,
+                        "valid": true
+                    },
+                    "note": {
+                        "name": "",
+                        "value": 0.0,
+                        "valid": true
+                    },
+                    "geforderteKompetenzen": [
+                        ""
+                    ],
+                    "kompetenzen": [
+                        ""
+                    ],
+                    "veranst": [
+                        {
+                            "name": "Medieninformatik Praktikum",
+                            "cp": 2,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        },
+                        {
+                            "name": "Medieninformatik Vorlesung",
+                            "cp": 3,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        }
+                    ],
+                    "verfuegbar": "WiSe",
+                    "orginalSemester": 1
+                },
+                {
+                    "name": "Bwl",
+                    "cp": 5,
+                    "bestanden": {
+                        "name": "",
+                        "value": false,
+                        "valid": true
+                    },
+                    "note": {
+                        "name": "",
+                        "value": 0.0,
+                        "valid": true
+                    },
+                    "geforderteKompetenzen": [
+                        ""
+                    ],
+                    "kompetenzen": [
+                        ""
+                    ],
+                    "veranst": [
+                        {
+                            "name": "BWL Uebung",
+                            "cp": 0,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        },
+                        {
+                            "name": "BWL Vorlesung",
+                            "cp": 5,
+                            "semAnzahl": 1,
+                            "bestanden": {
+                                "name": "",
+                                "value": false,
+                                "valid": true
+                            },
+                            "note": {
+                                "name": "",
+                                "value": 0.0,
+                                "valid": true
+                            },
+                            "fehlversuche": {
+                                "name": "",
+                                "value": 0,
+                                "valid": true
+                            }
+                        }
+                    ],
+                    "verfuegbar": "WiSe",
+                    "orginalSemester": 1
+                }
+            ]
+        }
+    ],
+    "fortschrittsregel": 3,
+    "eigeneCpGrenze": 17,
+    "erlangteKompetenzen": [
+        ""
+    ]
+}

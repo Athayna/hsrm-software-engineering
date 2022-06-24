@@ -1,12 +1,13 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.Studiengangverwaltung;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Semester {
+public class Semester{
 
     private int zahl;
     private int cp;
@@ -18,7 +19,7 @@ public class Semester {
         this.cp = cp;
         this.abgeschlossen = new SimpleBooleanProperty(abgeschlossen);
         this.module = FXCollections.observableArrayList();
-        module.addAll(module);
+        this.module.addAll(module);
     }
 
     public void modulHinzufuegen(Modul m) {
