@@ -3,11 +3,11 @@ plugins {
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.12'
 }
-mainClassName = "de.hsrm.mi.swt.Ampel"
+mainClassName = "de.hsrm.mi.swt.spass.Main"
 
 // Konfiguration des JavaFX-Plugins: Version und benötigte Module
 javafx {
-    // version = "17"
+    version = "17"
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
@@ -24,6 +24,7 @@ dependencies {
 }
 
 // Initialisierung für JUnit-Testing
+
 test {
     useJUnitPlatform()
 }

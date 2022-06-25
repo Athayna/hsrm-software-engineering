@@ -1,6 +1,4 @@
-package de.hsrm.mi.swt.spass.geschaeftslogik.Studiengangverwaltung;
-
-import java.io.Serializable;
+package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung;
 import java.util.List;
 
 import javafx.beans.property.SimpleBooleanProperty;
@@ -29,5 +27,39 @@ public class Semester{
     public void modulLoeschen(Modul m) {
         module.remove(m);
     }
+
+    public int getZahl() {
+        return zahl;
+    }
+
+    public void setZahl(int zahl) {
+        this.zahl = zahl;
+    }
+
+    public int getCp() {
+        return cp;
+    }
+
+    public void setCp(int cp) {
+        this.cp = cp;
+    }
+
+    public SimpleBooleanProperty getAbgeschlossen() {
+        return abgeschlossen;
+    }
+
+    public void setAbgeschlossen(SimpleBooleanProperty abgeschlossen) {
+        this.abgeschlossen = abgeschlossen;
+    }
+
+    public ObservableList<Modul> getModule() {
+        return module;
+    }
+
+    public void setModule(ObservableList<Modul> module) {
+        this.module = module;
+    }
+
+    
 
 }

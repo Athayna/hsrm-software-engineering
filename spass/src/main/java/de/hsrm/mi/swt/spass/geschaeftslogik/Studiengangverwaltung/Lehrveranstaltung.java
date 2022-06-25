@@ -1,6 +1,5 @@
-package de.hsrm.mi.swt.spass.geschaeftslogik.Studiengangverwaltung;
+package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung;
 
-import java.io.Serializable;
 
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleFloatProperty;
@@ -15,9 +14,6 @@ public class Lehrveranstaltung{
     private SimpleFloatProperty note;
     private SimpleIntegerProperty fehlversuche;
     
-
-
-
     public Lehrveranstaltung(String name, int cp, int semAnzahl, boolean bestanden, float note, int fehlversuche) {
         this.name = name;
         this.cp = cp;
@@ -27,7 +23,51 @@ public class Lehrveranstaltung{
         this.fehlversuche = new SimpleIntegerProperty(fehlversuche);
     }
 
-    
-    
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCp() {
+        return cp;
+    }
+
+    public void setCp(int cp) {
+        this.cp = cp;
+    }
+
+    public int getSemAnzahl() {
+        return semAnzahl;
+    }
+
+    public void setSemAnzahl(int semAnzahl) {
+        this.semAnzahl = semAnzahl;
+    }
+
+    public SimpleBooleanProperty getBestanden() {
+        return bestanden;
+    }
+
+    public void setBestanden(SimpleBooleanProperty bestanden) {
+        this.bestanden = bestanden;
+    }
+
+    public SimpleFloatProperty getNote() {
+        return note;
+    }
+
+    public void setNote(SimpleFloatProperty note) {
+        this.note = note;
+    }
+
+    public SimpleIntegerProperty getFehlversuche() {
+        return fehlversuche;
+    }
+
+    public void setFehlversuche(SimpleIntegerProperty fehlversuche) {
+        this.fehlversuche = fehlversuche;
+    }
 }

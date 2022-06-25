@@ -1,0 +1,1 @@
+SemesterView ist eine Listcell mit Controller-Elementen. - Übernommen aus Eibo - Okay so?

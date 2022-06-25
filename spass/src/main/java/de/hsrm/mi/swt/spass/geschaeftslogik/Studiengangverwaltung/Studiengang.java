@@ -1,7 +1,5 @@
-package de.hsrm.mi.swt.spass.geschaeftslogik.Studiengangverwaltung;
+package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javafx.collections.FXCollections;
@@ -31,13 +29,79 @@ public class Studiengang{
         this.erlangteKompetenzen = erlangteKompetenzen;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCp() {
+        return cp;
+    }
+
+    public void setCp(int cp) {
+        this.cp = cp;
+    }
+
+    public int getSemanzahl() {
+        return semanzahl;
+    }
+
+    public void setSemanzahl(int semanzahl) {
+        this.semanzahl = semanzahl;
+    }
+
+    public String getAbschluss() {
+        return abschluss;
+    }
+
+    public void setAbschluss(String abschluss) {
+        this.abschluss = abschluss;
+    }
+
+    public ObservableList<Semester> getSemester() {
+        return semester;
+    }
+
+    public void setSemester(ObservableList<Semester> semester) {
+        this.semester = semester;
+    }
+
+    public int getFortschrittsregel() {
+        return fortschrittsregel;
+    }
+
+    public void setFortschrittsregel(int fortschrittsregel) {
+        this.fortschrittsregel = fortschrittsregel;
+    }
+
+    public int getEigeneCpGrenze() {
+        return eigeneCpGrenze;
+    }
+
+    public void setEigeneCpGrenze(int eigeneCpGrenze) {
+        this.eigeneCpGrenze = eigeneCpGrenze;
+    }
+
+    public List<String> getErlangteKompetenzen() {
+        return erlangteKompetenzen;
+    }
+
+    public void setErlangteKompetenzen(List<String> erlangteKompetenzen) {
+        this.erlangteKompetenzen = erlangteKompetenzen;
+    }
+
+
+/* 
     public void semesterHinzufuegen(){
         int num = semester.size()+ 1 ;
         semester.add(new Semester(num, 0, false, new ArrayList<Modul>()));
     }
 
+*/
 
-
-
+    
     
 }
