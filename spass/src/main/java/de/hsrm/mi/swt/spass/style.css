@@ -34,9 +34,14 @@
 }
 
 #studiengangName{
-    -fx-padding: 0px 50px;
+    -fx-padding: 0px 400px;
     -fx-font-size: 24pt;
+    -fx-text-fill: rgb(154, 164, 195);
 
+}
+
+.list-cell:filled:selected:focused{
+    -fx-background-color: white;
 }
 
 #semesterListe{
@@ -79,9 +84,6 @@
 
 #semesterZelle{
 	-fx-padding: 8px;
-	-fx-border-style: hidden hidden solid hidden;
-    -fx-border-width: 1;
-    -fx-border-color: rgb(235, 235, 235);
     -fx-pref-height: 80px;
     -fx-background-color: rgb(154, 164, 195);
 
@@ -96,13 +98,31 @@
 
 #modulListe{
     -fx-pref-width: 1050px;
+
+}
+
+#modulListe .list-cell{
+    -fx-background-color: white;
+    -fx-border-style: hidden solid hidden hidden;
+    -fx-border-width: 1;
+    -fx-border-color: rgb(176, 176, 177);
+    -fx-effect: innershadow( gaussian, rgba(87, 85, 85, 0.3), 10, 0, -5, -5 );
 }
 
 #modulBox{
-    fx-background-color: none;
+    
 }
-#modulBox:focus{
-    fx-background-color: none;
+
+#modulBoxName{
+    -fx-text-fill: black;
+    -fx-font-size: 11pt;
+    -fx-padding: 4px 2px 4px 0px;
+}
+
+#modulCpBox{
+    -fx-text-fill: black;
+    -fx-font-size: 9pt;
+    -fx-padding: 0px 0px 0px 30px;
 }
 
 #semHinzuButton{

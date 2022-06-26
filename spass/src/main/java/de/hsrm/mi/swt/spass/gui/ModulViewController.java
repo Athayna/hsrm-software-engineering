@@ -32,8 +32,12 @@ public class ModulViewController extends ListCell<Modul>{
         if(item != null){
             name.setText(item.getName());
             cp.setText(Integer.toString(item.getCp()));
-            int boxBreite = item.getCp() * 32;
+            
+            int boxBreite = item.getCp() * 35;
             box.setStyle("-fx-pref-width: "+ boxBreite + "px;");
+            boxBreite -= 20;
+            cp.setStyle("-fx-padding: 0px 0px 0px "+ boxBreite + "px;");
+
 
             setGraphic(box);
         }else{
