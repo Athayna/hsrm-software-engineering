@@ -39,7 +39,7 @@ public class Main extends Application {
         scenes = new HashMap<>();
         root = new BorderPane();
         root.getStyleClass().add("root");
-        scene = new Scene(root);
+        scene = new Scene(root, 1280, 720);
 
         studienplaner = new Studienplaner();
 
@@ -50,7 +50,7 @@ public class Main extends Application {
 		SemesterViewController semViewCon = new SemesterViewController(this);
         //scene.getStylesheets().add(getClass().getResource("file:///" +"C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css").toExternalForm());
 		scene.getStylesheets().clear();
-		//scene.getStylesheets().add("file:///C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
+		scene.getStylesheets().add("file:///C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
 		//scene.getStylesheets().add("file:///./src/main/java/de/hsrm/mi/swt/spass/style.css");
 
 	

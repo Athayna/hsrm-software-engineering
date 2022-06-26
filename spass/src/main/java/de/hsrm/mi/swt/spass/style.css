@@ -1,6 +1,101 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-*{
-    -fx-background-color: rgb(220, 138, 138);
+.button{
+	-fx-color: #5383cb;
+    -fx-text-fill: black;
+	-fx-padding: 7;
+	-fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 45px;
+    -fx-background-radius: 100px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 3, 0.2, 0.2, 0.8);
+	
 }
 
+.button:hover{
+	-fx-cursor: hand;
+}
+
+#szene{
+    -fx-background-color: rgb(212, 22, 22);
+    -fx-pref-width: 1280px;
+    -fx-alignment: top-center;
+}
+
+#topleiste{
+    -fx-background-color: rgb(30, 30, 30);
+    -fx-padding: 5px 20px;
+}
+
+#dateiButton{
+    -fx-font-size: 11pt;
+}
+
+#studiengangName{
+    -fx-padding: 0px 50px;
+    -fx-font-size: 24pt;
+
+}
+
+#semesterListe{
+    -fx-pref-height: 600px;
+}
+
+#semesterListe .scroll-bar{
+	-fx-background-color: transparent;
+}
+
+#semesterListe.scroll-bar .track{
+    -fx-background-color:rgb(245, 245, 245);
+    -fx-effect: dropshadow(three-pass-box , rgba(0, 0, 0, 0.2) , 3 , 0.2 , 0.3, 0.3 );
+    -fx-border-color:none;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+}
+
+#semesterListe .scroll-bar .increment-arrow,
+#semesterListe .scroll-bar .decrement-arrow
+{
+    -fx-shape: " ";
+    -fx-padding: 0 15 0 0;
+}
+
+#semesterListe .scroll-bar .increment-button ,
+#semesterListe .scroll-bar .decrement-button {
+    -fx-padding:0;
+ 
+}
+
+#semesterListe .scroll-bar .thumb {
+    -fx-background-color:rgb(235, 235, 235);
+    -fx-background-insets: 0;
+    -fx-background-radius: 20px;
+    -fx-pref-height: 50px;
+    -fx-effect: dropshadow(three-pass-box , rgba(0, 0, 0, 0.4) , 1 , 0.2 , 0.3, 0.3 );
+}
+
+#semesterZelle{
+	-fx-padding: 8px;
+	-fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1;
+    -fx-border-color: rgb(235, 235, 235);
+    -fx-pref-height: 80px;
+    -fx-background-color: rgb(154, 164, 195);
+
+}
+
+#semZahl{
+    -fx-pref-width: 80px;
+    -fx-alignment: top-center;
+    -fx-font-size: 13pt;
+    -fx-font-weight: bold;
+}
+
+#modulListe{
+    -fx-pref-width: 1050px;
+}
+
+#modulBox{
+
+}
