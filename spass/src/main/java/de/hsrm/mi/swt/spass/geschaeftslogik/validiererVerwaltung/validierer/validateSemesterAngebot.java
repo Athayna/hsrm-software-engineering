@@ -3,11 +3,10 @@ package de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
-import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.ValidateService;
 
-public class validateSemesterAngebot implements ValidateService {
+public class validateSemesterAngebot {
 
-    @Override
+    //@Override
     public boolean validateState(Studiengang studiengang) {
 
         for (Semester sem : studiengang.getSemester()) {

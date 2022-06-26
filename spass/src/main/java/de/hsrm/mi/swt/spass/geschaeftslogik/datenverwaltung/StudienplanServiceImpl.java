@@ -1,10 +1,10 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung;
 
-
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 
 import com.google.gson.Gson;
 
@@ -20,7 +20,7 @@ public class StudienplanServiceImpl implements StudienplanService {
 
         SaveLoadKlassen helpMe = new SaveLoadKlassen();
 
-        String path = "src/main/java/de/hsrm/mi/swt/spass/geschaeftslogik/recourcen/"+ studiengangName + ".json";
+        String path = "src/main/resources/"+ studiengangName + ".json";
 
         String content = "";
         try {
@@ -40,8 +40,21 @@ public class StudienplanServiceImpl implements StudienplanService {
     }
 
     @Override
-    public void studiengangSpeichern() {
-        // TODO Auto-generated method stub
+    public void studiengangSpeichern(Studiengang studiengang) {
+
+        Gson gson = new Gson();
+
+        SaveLoadKlassen helpMe = new SaveLoadKlassen();
+
+        StudiengangSL miSL = helpMe.getSLStudiengang(studiengang);
+
+        String path = "src/main/resources/"+studiengang.getName()+".json";
+
+        try (PrintWriter out = new PrintWriter(new FileWriter(path))) {
+            out.write(gson.toJson(miSL));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         
     }
     

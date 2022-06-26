@@ -1,13 +1,7 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik;
 
-import java.io.FileWriter;
-
-import java.io.PrintWriter;
 import java.util.Arrays;
-import com.google.gson.Gson;
 
-import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.SaveLoadKlassen;
-import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.SaveLoadKlassen.StudiengangSL;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Lehrveranstaltung;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
@@ -17,13 +11,7 @@ import javafx.collections.ObservableList;
 
 public class InitStudiengang {
 
-    public static void main(String[] args) {
-        InitStudiengang new1 = new InitStudiengang();
-        new1.testSpeichern();
-
-    }
-
-    public Studiengang erstelleStudiengang() {
+    public static Studiengang erstelleStudiengang() {
 
         // 1. Sem
         Lehrveranstaltung mathe1Vorl = new Lehrveranstaltung("Mathe1 Vorlesung", 5, 1, false, 0, 0);
@@ -199,22 +187,4 @@ public class InitStudiengang {
         return medieninformatik;
     }
 
-    public void testSpeichern() {
-
-        Studiengang medieninformatik = erstelleStudiengang();
-
-        Gson gson = new Gson();
-
-        SaveLoadKlassen helpMe = new SaveLoadKlassen();
-
-        StudiengangSL miSL = helpMe.getSLStudiengang(medieninformatik);
-
-        String path = "src/main/java/de/hsrm/mi/swt/spass/geschaeftslogik/recourcen/studiengang.json";
-
-        try (PrintWriter out = new PrintWriter(new FileWriter(path))) {
-            out.write(gson.toJson(miSL));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }

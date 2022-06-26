@@ -6,6 +6,6 @@ public interface StudienplanService {
 
     public Studiengang studienplanLaden(String StudiengangName);
     
-    public void studiengangSpeichern();
+    public void studiengangSpeichern(Studiengang studiengang);
     
 }
