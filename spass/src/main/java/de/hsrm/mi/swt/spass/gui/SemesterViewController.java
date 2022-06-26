@@ -35,6 +35,7 @@ public class SemesterViewController extends ListCell<Semester>{
         
         if(item != null){
             semZahl.setText(Integer.toString(item.getZahl()));
+            semZahl.setId("semZahl");
             module.setItems(studienplaner.getStudiengang().getSemester().get((item.getZahl()-1)).getModule());
             module.setCellFactory(mod -> new ModulView());
 

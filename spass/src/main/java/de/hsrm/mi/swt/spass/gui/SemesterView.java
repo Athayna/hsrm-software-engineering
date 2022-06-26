@@ -17,8 +17,10 @@ public class SemesterView extends ListCell<Semester>{
     public SemesterView(){ 
 
         leiste = new HBox();
+        leiste.setId("semesterZelle");
         semZahl = new Label("0");
         module = new ListView<>();
+        module.setId("modulListe");
         module.setOrientation(Orientation.HORIZONTAL);
         leiste.getChildren().addAll(semZahl, module);
 

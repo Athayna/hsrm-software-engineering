@@ -14,6 +14,7 @@ public class ModulView extends ListCell<Modul>{
     public ModulView(){ 
 
         box = new VBox();
+        box.setId("modulBox");
         name = new Label("Modul");
         cp = new Label("0");
 
@@ -30,6 +31,8 @@ public class ModulView extends ListCell<Modul>{
         if(item != null){
             name.setText(item.getName());
             cp.setText(Integer.toString(item.getCp()));
+            int boxBreite = item.getCp() * 32;
+            box.setStyle("-fx-pref-width: "+ boxBreite + "px;");
 
             setGraphic(box);
         }else{

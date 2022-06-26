@@ -22,12 +22,15 @@ public class StudienplanView extends Pane{
         szene.setId("szene");
         
         HBox topleiste = new HBox();
-        datei = new Button("Datei");
-        name = new Label("Semestername");
         topleiste.setId("topleiste");
+        datei = new Button("Datei");
+        datei.setId("dateiButton");
+        name = new Label("Semestername");
+        name.setId("studiengangName");
         topleiste.getChildren().addAll(datei, name);
 
         semester = new ListView<>();
+        semester.setId("semesterListe");
         semester.setOrientation(Orientation.VERTICAL);
 
         semHinzufuegen = new Button("Semester hinzufügen");
