@@ -170,7 +170,7 @@ public class InitStudiengang {
         Lehrveranstaltung portfolioPrak = new Lehrveranstaltung("Protfolio Praktikum", 5, 7, false, 0, 0);
         Lehrveranstaltung thesisLehr = new Lehrveranstaltung("Bachelor-Thesis", 15, 7, false, 0, 0);
 
-        Modul international = new Modul("<internationalisierung", 4, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul international = new Modul("Internationalisierung", 4, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(internationalVorl, ineternationalUeb), "immer", 7);
         Modul portfolio = new Modul("Portfolio", 10, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(portfolioVorl, portfolioPrak), "immer", 7);
