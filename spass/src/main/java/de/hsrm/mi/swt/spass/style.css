@@ -1,12 +1,11 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
 .button{
-	-fx-color: #5383cb;
+	-fx-color: rgb(154, 164, 195);
     -fx-text-fill: black;
 	-fx-padding: 7;
 	-fx-border-insets: 5px;
     -fx-background-insets: 5px;
-    -fx-pref-width: 120px;
     -fx-pref-height: 45px;
     -fx-background-radius: 100px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 3, 0.2, 0.2, 0.8);
@@ -18,18 +17,20 @@
 }
 
 #szene{
-    -fx-background-color: rgb(212, 22, 22);
+    -fx-background-color: rgb(37, 40, 80);
     -fx-pref-width: 1280px;
     -fx-alignment: top-center;
 }
 
 #topleiste{
-    -fx-background-color: rgb(30, 30, 30);
+    -fx-background-color: rgb(37, 40, 80);
     -fx-padding: 5px 20px;
 }
 
 #dateiButton{
     -fx-font-size: 11pt;
+    -fx-pref-width: 120px;
+
 }
 
 #studiengangName{
@@ -40,6 +41,7 @@
 
 #semesterListe{
     -fx-pref-height: 600px;
+    -fx-background-color: none;
 }
 
 #semesterListe .scroll-bar{
@@ -97,5 +99,12 @@
 }
 
 #modulBox{
+    fx-background-color: none;
+}
+#modulBox:focus{
+    fx-background-color: none;
+}
 
+#semHinzuButton{
+    -fx-pref-width: 300px;
 }

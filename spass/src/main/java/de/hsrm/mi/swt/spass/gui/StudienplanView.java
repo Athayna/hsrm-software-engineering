@@ -33,7 +33,8 @@ public class StudienplanView extends Pane{
         semester.setId("semesterListe");
         semester.setOrientation(Orientation.VERTICAL);
 
-        semHinzufuegen = new Button("Semester hinzufügen");
+        semHinzufuegen = new Button("Semester hinzufuegen");
+        semHinzufuegen.setId("semHinzuButton");
 
         szene.getChildren().addAll(topleiste, semester, semHinzufuegen);
 

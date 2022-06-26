@@ -24,21 +24,18 @@ public class ModulView extends ListCell<Modul>{
 
     }
 
-    @Override
-    protected void updateItem(Modul item, boolean empty){
-        super.updateItem(item, empty);
-        
-        if(item != null){
-            name.setText(item.getName());
-            cp.setText(Integer.toString(item.getCp()));
-            int boxBreite = item.getCp() * 32;
-            box.setStyle("-fx-pref-width: "+ boxBreite + "px;");
-
-            setGraphic(box);
-        }else{
-            setGraphic(null);
-            setText(null);
-        }
+    public VBox getBox() {
+        return box;
     }
+
+    public Label getName() {
+        return name;
+    }
+
+    public Label getCp() {
+        return cp;
+    }
+
+    
 
 }
