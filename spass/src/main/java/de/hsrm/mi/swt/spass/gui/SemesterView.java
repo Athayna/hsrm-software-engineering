@@ -26,20 +26,30 @@ public class SemesterView extends ListCell<Semester>{
 
     }
 
-    @Override
-    protected void updateItem(Semester item, boolean empty){
-        super.updateItem(item, empty);
-        
-        if(item != null){
-            semZahl.setText(Integer.toString(item.getZahl()));
-            //module.setItems(gameController.getObservables().getHighscore());
-            //module.setCellFactory(mod -> new ModulView());
-
-            setGraphic(leiste);
-        }else{
-            setGraphic(null);
-            setText(null);
-        }
+    public HBox getLeiste() {
+        return leiste;
     }
 
+    public void setLeiste(HBox leiste) {
+        this.leiste = leiste;
+    }
+
+    public Label getSemZahl() {
+        return semZahl;
+    }
+
+    public void setSemZahl(Label semZahl) {
+        this.semZahl = semZahl;
+    }
+
+    public ListView<Modul> getModule() {
+        return module;
+    }
+
+    public void setModule(ListView<Modul> module) {
+        this.module = module;
+    }
+
+    
+    
 }

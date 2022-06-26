@@ -6,6 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import javafx.geometry.Orientation;
 import javafx.scene.control.Button;
 
 public class StudienplanView extends Pane{
@@ -18,6 +19,7 @@ public class StudienplanView extends Pane{
     public StudienplanView(){
         
         VBox szene = new VBox();
+        szene.setId("szene");
         
         HBox topleiste = new HBox();
         datei = new Button("Datei");
@@ -26,6 +28,8 @@ public class StudienplanView extends Pane{
         topleiste.getChildren().addAll(datei, name);
 
         semester = new ListView<>();
+        semester.setOrientation(Orientation.VERTICAL);
+
         semHinzufuegen = new Button("Semester hinzufügen");
 
         szene.getChildren().addAll(topleiste, semester, semHinzufuegen);

@@ -41,7 +41,7 @@ public class StudienplanViewController extends ViewController{
 		
         name.setText(studienplaner.getStudiengang().getName());
         semester.setItems(studienplaner.getStudiengang().getSemester());
-        semester.setCellFactory(sem -> new SemesterView());
+        semester.setCellFactory(sem -> new SemesterViewController(main));
 
         semHinzufuegen.setOnAction(e -> {
             studienplaner.getStudiengang().getSemester().add(

@@ -1,9 +1,11 @@
 package de.hsrm.mi.swt.spass;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
+import de.hsrm.mi.swt.spass.gui.SemesterViewController;
 import de.hsrm.mi.swt.spass.gui.StudienplanViewController;
 import de.hsrm.mi.swt.spass.gui.ViewController;
 import javafx.application.Application;
@@ -45,10 +47,16 @@ public class Main extends Application {
         viewController = new StudienplanViewController(this);
         
         scenes.put(Scenes.PLAN_SCENE, viewController.getRootView());
+		SemesterViewController semViewCon = new SemesterViewController(this);
+        //scene.getStylesheets().add(getClass().getResource("file:///" +"C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css").toExternalForm());
+		scene.getStylesheets().clear();
+		//scene.getStylesheets().add("file:///C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
+		//scene.getStylesheets().add("file:///./src/main/java/de/hsrm/mi/swt/spass/style.css");
 
-        //scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-
-    }
+	
+	}
+	
+	
 
     @Override
     public void start(Stage stage) {
