@@ -5,9 +5,9 @@ import java.util.List;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 
-public class validateKompetenzen {
+public class ValidateKompetenzen {
 
-    public boolean validateState(Studiengang studiengang, Modul modul, int semWish) {
+    public static boolean validateState(Studiengang studiengang, Modul modul, int semWish) {
         List<String> geforderteKompetenzen = modul.getGeforderteKompetenzen();
 
         gefunden:
@@ -21,7 +21,8 @@ public class validateKompetenzen {
                     }           
                 }           
             } 
-            return false;     
+            System.out.println("Fehlende Kompetenzen"); 
+            return false;
         }
         return true;
     }

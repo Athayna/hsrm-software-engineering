@@ -134,8 +134,8 @@ public class InitStudiengang {
         Lehrveranstaltung swtprojPrak = new Lehrveranstaltung("Swtprojekt Praktikum", 5, 5, false, 0, 0);
         Lehrveranstaltung mciVorl = new Lehrveranstaltung("mci Vorlesung", 3, 5, false, 0, 0);
         Lehrveranstaltung mciPrak = new Lehrveranstaltung("mci Praktikum", 3, 5, false, 0, 0);
-        Lehrveranstaltung wpGrVorl = new Lehrveranstaltung("Wp groß Vorlesung", 5, 5, false, 0, 0);
-        Lehrveranstaltung wpGrPrak = new Lehrveranstaltung("Wp groß Praktikum", 5, 5, false, 0, 0);
+        Lehrveranstaltung wpGrVorl = new Lehrveranstaltung("Wp gross Vorlesung", 5, 5, false, 0, 0);
+        Lehrveranstaltung wpGrPrak = new Lehrveranstaltung("Wp gross Praktikum", 5, 5, false, 0, 0);
         Lehrveranstaltung wpKlVorl = new Lehrveranstaltung("Wp klein Vorlesung", 3, 5, false, 0, 0);
         Lehrveranstaltung wpKlPrak = new Lehrveranstaltung("Wp klein Praktikum", 2, 5, false, 0, 0);
 
@@ -143,7 +143,7 @@ public class InitStudiengang {
                 Arrays.asList(swtprojVorl, swtprojPrak), "WiSe", 5);
         Modul mci = new Modul("Mensch Computer Interaktion", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(mciVorl, mciPrak), "WiSe", 5);
-        Modul wpGr = new Modul("Wp groß", 10, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul wpGr = new Modul("Wp gross", 10, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(wpGrVorl, wpGrPrak), "immer", 5);
         Modul wpKl = new Modul("Wp klein", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(wpKlVorl, wpKlPrak), "immer", 5);
