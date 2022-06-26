@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import de.hsrm.mi.swt.spass.Main;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import javafx.scene.control.Button;
 
 

@@ -1,4 +1,4 @@
-package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01;
+package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung;
 
 
 import javafx.beans.property.SimpleBooleanProperty;

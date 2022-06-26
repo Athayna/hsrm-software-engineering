@@ -1,7 +1,7 @@
 package de.hsrm.mi.swt.spass.gui;
 
 import javafx.scene.layout.VBox;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Modul;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 

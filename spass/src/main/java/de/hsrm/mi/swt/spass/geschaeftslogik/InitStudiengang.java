@@ -8,10 +8,10 @@ import com.google.gson.Gson;
 
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.SaveLoadKlassen;
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.SaveLoadKlassen.StudiengangSL;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Lehrveranstaltung;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Modul;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Semester;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Studiengang;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Lehrveranstaltung;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
