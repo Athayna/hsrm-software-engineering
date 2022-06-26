@@ -16,7 +16,9 @@ public class ModulView extends ListCell<Modul>{
         box = new VBox();
         box.setId("modulBox");
         name = new Label("Modul");
+        name.setId("modulBoxName");
         cp = new Label("0");
+        cp.setId("modulCpBox");
 
         box.getChildren().addAll(name, cp);
 
