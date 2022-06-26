@@ -1,6 +1,6 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer;
 
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Studiengang;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.ValidateService;
 
 public class validateFortschrittsregel implements ValidateService {

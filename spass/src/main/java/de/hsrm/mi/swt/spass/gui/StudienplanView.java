@@ -5,7 +5,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Semester;
 import javafx.scene.control.Button;
 
 public class StudienplanView extends Pane{

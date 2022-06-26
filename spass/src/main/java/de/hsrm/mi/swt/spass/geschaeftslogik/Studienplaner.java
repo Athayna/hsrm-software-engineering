@@ -2,7 +2,7 @@ package de.hsrm.mi.swt.spass.geschaeftslogik;
 
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanService;
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanServiceImpl;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Studiengang;
 
 public class Studienplaner {
 

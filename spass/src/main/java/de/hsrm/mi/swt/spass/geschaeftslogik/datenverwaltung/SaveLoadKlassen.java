@@ -3,10 +3,10 @@ package de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Lehrveranstaltung;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Lehrveranstaltung;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Modul;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Studiengang;
 
 
 public class SaveLoadKlassen {

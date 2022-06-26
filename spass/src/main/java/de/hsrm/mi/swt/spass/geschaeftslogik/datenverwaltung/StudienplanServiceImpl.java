@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 import com.google.gson.Gson;
 
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.SaveLoadKlassen.StudiengangSL;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Studiengang;
 
 public class StudienplanServiceImpl implements StudienplanService {
 

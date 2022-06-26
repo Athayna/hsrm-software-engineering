@@ -1,8 +1,8 @@
 package de.hsrm.mi.swt.spass.gui;
 
 import javafx.scene.layout.HBox;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Modul;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung01.Semester;
 import javafx.geometry.Orientation;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
