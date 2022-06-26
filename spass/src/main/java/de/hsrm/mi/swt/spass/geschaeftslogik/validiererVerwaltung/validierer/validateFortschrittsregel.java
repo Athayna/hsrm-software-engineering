@@ -1,19 +1,17 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer;
 
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
-import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.ValidateService;
 
-public class validateFortschrittsregel implements ValidateService {
+public class validateFortschrittsregel  {
 
-    private int fortschrittsBlockade;
-
-    @Override
-    public boolean validateState(Studiengang studiengang) {
-
-        this.fortschrittsBlockade = studiengang.getFortschrittsregel();
-
-        return true;
-        
-    }
-    
+    public boolean validateState(Studiengang studiengang, Modul modul, int semWish) {
+        for (int i = semWish - 1; i < studiengang.getSemester().size(); i++) {
+            for (Modul m : studiengang.getSemester().get(i).getModule()) {
+                if (m.getOrginalSemester() <= modul.getOrginalSemester() - studiengang.getFortschrittsregel())
+                    return false;
+            }
+        }
+        return true;    
+    }  
 }
