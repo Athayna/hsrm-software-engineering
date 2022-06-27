@@ -15,6 +15,8 @@ public class ValidateFortschrittsregel  {
                 }
             }
         }
+
+        
         System.out.println("Fortschrittsregel validiert");
         return true;    
     }  

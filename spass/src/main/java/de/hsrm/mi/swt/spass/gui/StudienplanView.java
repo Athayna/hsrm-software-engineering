@@ -15,6 +15,7 @@ public class StudienplanView extends Pane{
     private Label name;
     private ListView<Semester> semester;
     private Button semHinzufuegen;
+    private Button semTrim;
 
     public StudienplanView(){
         
@@ -35,8 +36,10 @@ public class StudienplanView extends Pane{
 
         semHinzufuegen = new Button("Semester hinzufuegen");
         semHinzufuegen.setId("semHinzuButton");
+        semTrim = new Button("Leer-Semester entfernen");
+        semTrim.setId("semTrim");
 
-        szene.getChildren().addAll(topleiste, semester, semHinzufuegen);
+        szene.getChildren().addAll(topleiste, semester, semHinzufuegen, semTrim);
 
         this.getChildren().addAll(szene);
 
@@ -56,6 +59,10 @@ public class StudienplanView extends Pane{
 
     public Button getSemHinzuButton(){
         return semHinzufuegen;
+    }
+
+    public Button getSemTrim(){
+        return semTrim;
     }
 
 }
