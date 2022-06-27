@@ -3,7 +3,11 @@ package de.hsrm.mi.swt.spass;
 import java.util.HashMap;
 import java.util.Map;
 
+import de.hsrm.mi.swt.spass.geschaeftslogik.InitStudiengang;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
+import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanService;
+import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanServiceImpl;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 import de.hsrm.mi.swt.spass.gui.SemesterViewController;
 import de.hsrm.mi.swt.spass.gui.StudienplanViewController;
 import de.hsrm.mi.swt.spass.gui.ViewController;
@@ -30,6 +34,9 @@ public class Main extends Application {
     private Map<Scenes, Pane> scenes;
 
     public static void main(String[] args){
+		Studiengang stud = InitStudiengang.erstelleStudiengang();
+		StudienplanServiceImpl helper = new StudienplanServiceImpl();
+		helper.studiengangSpeichern(stud);
         launch();
     }
 

@@ -9,14 +9,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
-/* 
+
 
 import java.util.Arrays;
 import java.util.List;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
-*/
+
 
 public class SemesterViewController extends ListCell<Semester> {
 
@@ -35,7 +35,7 @@ public class SemesterViewController extends ListCell<Semester> {
         this.leiste = view.getLeiste();
         this.semZahl = view.getSemZahl();
         this.module = view.getModule();
-        /* 
+         
 
         module.setOnDragEntered(event -> {
             event.acceptTransferModes(TransferMode.MOVE);
@@ -69,7 +69,7 @@ public class SemesterViewController extends ListCell<Semester> {
             System.out.println(modulName);
             studienplaner.dragAndDrop(modulName, ausgangsSemester,zielSemester);
 		});
-        */
+        
 
     }
 

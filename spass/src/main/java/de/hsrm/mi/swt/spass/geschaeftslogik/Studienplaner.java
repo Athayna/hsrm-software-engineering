@@ -2,7 +2,7 @@ package de.hsrm.mi.swt.spass.geschaeftslogik;
 
 import java.util.List;
 
-
+import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanServiceImpl;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateFortschrittsregel;
@@ -12,12 +12,16 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.Vali
 public class Studienplaner {
 
     private Studiengang studiengang;
+    private StudienplanServiceImpl helper= new StudienplanServiceImpl();
+    private ValidateFortschrittsregel val1 = new ValidateFortschrittsregel();
+    private ValidateKompetenzen val2 = new ValidateKompetenzen();
+    private ValidateSemesterAngebot val3 = new ValidateSemesterAngebot();
 
     //private StudienplanServiceImpl simple = new StudienplanServiceImpl();
 
 
     public Studienplaner(){
-        studiengang = InitStudiengang.erstelleStudiengang();
+        studiengang = helper.studienplanLaden("Medieninformatik");
     }
 
     public Studiengang getStudiengang(){
@@ -47,9 +51,9 @@ public class Studienplaner {
 
     private boolean checkForDnD(Modul modul, int zielSemester){
         if(
-        ValidateFortschrittsregel.validateState(studiengang, modul, zielSemester) &&
-        ValidateKompetenzen.validateState(studiengang, modul, zielSemester) &&
-        ValidateSemesterAngebot.validateState(studiengang, modul, zielSemester)
+        val1.validateState(studiengang, modul, zielSemester) &&
+        val2.validateState(studiengang, modul, zielSemester) &&
+        val3.validateState(studiengang, modul, zielSemester)
         ){
             return true;
         }
