@@ -1,6 +1,5 @@
 package de.hsrm.mi.swt.spass.gui;
 
-
 import de.hsrm.mi.swt.spass.Main;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
@@ -10,13 +9,12 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
-
 
 public class SemesterViewController extends ListCell<Semester> {
 
@@ -35,41 +33,38 @@ public class SemesterViewController extends ListCell<Semester> {
         this.leiste = view.getLeiste();
         this.semZahl = view.getSemZahl();
         this.module = view.getModule();
-         
 
         module.setOnDragEntered(event -> {
             event.acceptTransferModes(TransferMode.MOVE);
-		});
+        });
 
         module.setOnDragOver(event -> {
             event.acceptTransferModes(TransferMode.MOVE);
-		});
+        });
 
         module.setOnDragDetected(event -> {
-            if( module.getSelectionModel().getSelectedItem()!= null){
-			Dragboard db = module.startDragAndDrop(TransferMode.MOVE);
-			ClipboardContent content = new ClipboardContent();
-            content.putString(semZahl.getText()+ " " + module.getSelectionModel().getSelectedItem().getName());
-            db.setContent(content);
+            if (module.getSelectionModel().getSelectedItem() != null) {
+                Dragboard db = module.startDragAndDrop(TransferMode.MOVE);
+                ClipboardContent content = new ClipboardContent();
+                content.putString(semZahl.getText() + " " + module.getSelectionModel().getSelectedItem().getName());
+                db.setContent(content);
             }
-		});
+        });
 
         module.setOnDragDropped(event -> {
             String modulDaten = event.getDragboard().getString();
             String[] dndDaten = modulDaten.split(" ");
-            int ausgangsSemester =  Integer.parseInt(dndDaten[0]);
+            int ausgangsSemester = Integer.parseInt(dndDaten[0]);
             int zielSemester = Integer.parseInt(semZahl.getText());
-            List<String> tempList = Arrays.asList(dndDaten);
-            tempList.remove(0);
+            List<String> tempList = new ArrayList<>();
+            tempList = Arrays.asList(dndDaten);
             String modulName = "";
-            for (String string : tempList) { 
-                modulName += string + " ";
+            for (int i = 1; i< tempList.size(); i++) {
+                modulName += tempList.get(i) + " ";
             }
-            modulName = modulName.trim(); // was lernen wir aus dieser Funktion? Das Python viel mehr Komfort bietet. 
-            System.out.println(modulName);
-            studienplaner.dragAndDrop(modulName, ausgangsSemester,zielSemester);
-		});
-        
+            modulName = modulName.trim(); // was lernen wir aus dieser Funktion? Das Python viel mehr Komfort bietet.
+            studienplaner.dragAndDrop(modulName, ausgangsSemester, zielSemester);
+        });
 
     }
 

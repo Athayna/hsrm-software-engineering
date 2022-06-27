@@ -15,6 +15,7 @@ public class ValidateSemesterAngebot {
             System.out.println("Kein Sommersemester");
             return false;
         }
+        System.out.println("Semesterzeit validiert");
         return true;
     }
     

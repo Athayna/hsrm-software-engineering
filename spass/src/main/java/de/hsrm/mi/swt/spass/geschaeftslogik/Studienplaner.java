@@ -42,10 +42,10 @@ public class Studienplaner {
         if(checkForDnD(modul, zielSemester) && modul != null){
             studiengang.getSemester().get(zielSemester-1).getModule().add(modul);
             studiengang.getSemester().get(ausgangsSemester-1).getModule().remove(modul);
-            System.out.println("Drag erfolgreich");
+            System.out.println("Drag erfolgreich \n");
             return true;
         }
-        System.out.println("Drag nicht erfolgreich");
+        System.out.println("Drag nicht erfolgreich \n");
         return false;
     }
 
