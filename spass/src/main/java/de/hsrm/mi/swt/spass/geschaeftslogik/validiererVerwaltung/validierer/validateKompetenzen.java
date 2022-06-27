@@ -7,7 +7,8 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 
 public class ValidateKompetenzen {
 
-    public static boolean validateState(Studiengang studiengang, Modul modul, int semWish) {
+    public boolean validateState(Studiengang studiengang, Modul modul, int semWish) {
+        System.out.println("validate Kompetenzen");
         List<String> geforderteKompetenzen = modul.getGeforderteKompetenzen();
 
         gefunden:

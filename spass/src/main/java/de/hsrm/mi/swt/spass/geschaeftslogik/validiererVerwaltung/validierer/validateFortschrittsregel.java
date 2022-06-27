@@ -5,7 +5,7 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 
 public class ValidateFortschrittsregel  {
 
-    public static boolean validateState(Studiengang studiengang, Modul modul, int semWish) {
+    public boolean validateState(Studiengang studiengang, Modul modul, int semWish) {
 
         System.out.println(semWish);
         for (int i = semWish - 1; i < studiengang.getSemester().size(); i++) {
