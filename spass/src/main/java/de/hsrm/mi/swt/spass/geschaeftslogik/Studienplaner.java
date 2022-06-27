@@ -5,17 +5,17 @@ import java.util.List;
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanServiceImpl;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
-import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.TValidateFortschrittsregel;
-import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.TValidateKompetenzen;
-import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.TValidateSemesterAngebot;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateFortschrittsregel;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzen;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateSemesterAngebot;
 
 public class Studienplaner {
 
     private Studiengang studiengang;
     private StudienplanServiceImpl helper= new StudienplanServiceImpl();
-    private TValidateFortschrittsregel val1 = new TValidateFortschrittsregel();
-    private TValidateKompetenzen val2 = new TValidateKompetenzen();
-    private TValidateSemesterAngebot val3 = new TValidateSemesterAngebot();
+    private ValidateFortschrittsregel val1 = new ValidateFortschrittsregel();
+    private ValidateKompetenzen val2 = new ValidateKompetenzen();
+    private ValidateSemesterAngebot val3 = new ValidateSemesterAngebot();
 
     //private StudienplanServiceImpl simple = new StudienplanServiceImpl();
 
