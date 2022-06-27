@@ -1,7 +1,6 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer;
 
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 
 public class ValidateSemesterAngebot {

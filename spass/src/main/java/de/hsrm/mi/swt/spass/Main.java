@@ -1,6 +1,5 @@
 package de.hsrm.mi.swt.spass;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
