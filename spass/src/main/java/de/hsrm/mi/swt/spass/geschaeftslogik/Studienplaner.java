@@ -43,7 +43,7 @@ public class Studienplaner {
             }
         }
         // add modul to its new semester, removes it of the old one
-        if(checkForDnD(modul, zielSemester) && modul != null){
+        if(checkForDnD(modul, zielSemester, ausgangsSemester) && modul != null){
             studiengang.getSemester().get(zielSemester-1).getModule().add(modul);
             studiengang.getSemester().get(ausgangsSemester-1).getModule().remove(modul);
             System.out.println("Drag erfolgreich \n");
@@ -53,10 +53,10 @@ public class Studienplaner {
         return false;
     }
 
-    private boolean checkForDnD(Modul modul, int zielSemester){
+    private boolean checkForDnD(Modul modul, int zielSemester, int ausgangsSemester){
         if(
         val1.validateState(studiengang, modul, zielSemester) &&
-        val2.validateState(studiengang, modul, zielSemester) &&
+        val2.validateState(studiengang, modul, zielSemester, ausgangsSemester) &&
         val3.validateState(studiengang, modul, zielSemester)
         ){
             return true;

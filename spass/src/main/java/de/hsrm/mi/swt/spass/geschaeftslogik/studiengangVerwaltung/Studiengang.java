@@ -1,11 +1,12 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Studiengang{
+public class Studiengang {
 
     private String name;
     private int cp;
@@ -16,7 +17,8 @@ public class Studiengang{
     private int eigeneCpGrenze;
     private List<String> erlangteKompetenzen;
 
-    public Studiengang(String name, int cp, int semanzahl, String abschluss, List<Semester> semester, int fortschrittsregel, int eigeneCpGrenze, List<String> erlangteKompetenzen) {
+    public Studiengang(String name, int cp, int semanzahl, String abschluss, List<Semester> semester,
+            int fortschrittsregel, int eigeneCpGrenze, List<String> erlangteKompetenzen) {
         this.name = name;
         this.cp = cp;
         this.semanzahl = semanzahl;
@@ -93,15 +95,18 @@ public class Studiengang{
         this.erlangteKompetenzen = erlangteKompetenzen;
     }
 
-
-/* 
-    public void semesterHinzufuegen(){
-        int num = semester.size()+ 1 ;
+    public void semesterHinzufuegen() {
+        int num = semester.size() + 1;
         semester.add(new Semester(num, 0, false, new ArrayList<Modul>()));
     }
 
-*/
-
-    
-    
+    public void trimSemester() {
+        for (int i = semester.size()-1; i >= 0; i--) {
+            if (semester.get(i).getModule().isEmpty()) {
+                semester.remove(i);
+            } else {
+                break;
+            }
+        }
+    }
 }

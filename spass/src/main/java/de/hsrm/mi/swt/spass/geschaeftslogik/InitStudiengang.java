@@ -25,11 +25,11 @@ public class InitStudiengang {
         Lehrveranstaltung bwlVorl = new Lehrveranstaltung("BWL Vorlesung", 5, 1, false, 0, 0);
         Lehrveranstaltung bwlUeb = new Lehrveranstaltung("BWL Uebung", 0, 1, false, 0, 0);
 
-        Modul mathe1 = new Modul("Mathe1", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul mathe1 = new Modul("Mathe1", 5, false, 0, Arrays.asList(""), Arrays.asList("logisches Denken","Mathematisches Grundverstaendnis"),
                 Arrays.asList(mathe1Vorl, mathe1Ueb), "WiSe", 1);
-        Modul prog1 = new Modul("Programmieren1", 7, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul prog1 = new Modul("Programmieren1", 7, false, 0, Arrays.asList(""), Arrays.asList("Java Grundlagen"),
                 Arrays.asList(prog1Prak, prog1Vorl), "WiSe", 1);
-        Modul eges = new Modul("Eges", 8, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul eges = new Modul("Eges", 8, false, 0, Arrays.asList(""), Arrays.asList("Print Gestaltung","gestalterische Grundlagen"),
                 Arrays.asList(egesPrak, egesVorl), "WiSe", 1);
         Modul medieninfo = new Modul("Medieninformatik", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(miPrak, miVorl), "WiSe", 1);
@@ -55,15 +55,15 @@ public class InitStudiengang {
         Lehrveranstaltung rechtVorl = new Lehrveranstaltung("Recht Vorlesung", 5, 2, false, 0, 0);
         Lehrveranstaltung rechtUeb = new Lehrveranstaltung("Recht Übung", 0, 2, false, 0, 0);
 
-        Modul ads = new Modul("ADS", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul ads = new Modul("ADS", 5, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("logisches Denken","Algorithmische Verfahren"),
                 Arrays.asList(adsVorl, adsPrak), "SoSe", 2);
-        Modul prog2 = new Modul("Prog 2", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul prog2 = new Modul("Prog 2", 5, false, 0, Arrays.asList("Java Grundlagen"), Arrays.asList("Java Entwicklung"),
                 Arrays.asList(prog2Vorl, prog2Prak), "SoSe", 2);
-        Modul azs = new Modul("AZS", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul azs = new Modul("AZS", 5, false, 0, Arrays.asList(""), Arrays.asList("HTML","CSS"),
                 Arrays.asList(azsVorl, azsPrak), "SoSe", 2);
-        Modul mathe2 = new Modul("Mathe 2", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul mathe2 = new Modul("Mathe 2", 5, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("Lineare Algebra"),
                 Arrays.asList(mathe2Vorl, mathe2Ueb), "SoSe", 2);
-        Modul gem = new Modul("GEM", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul gem = new Modul("GEM", 5, false, 0, Arrays.asList(""), Arrays.asList("Websitedesign"),
                 Arrays.asList(gemVorl, gemUeb), "SoSe", 2);
         Modul recht = new Modul("Recht", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(rechtVorl, rechtUeb), "SoSe", 2);
@@ -85,15 +85,15 @@ public class InitStudiengang {
         Lehrveranstaltung mathe3Vorl = new Lehrveranstaltung("Mathe3 Vorlesung", 6, 3, false, 0, 0);
         Lehrveranstaltung mathe3Ueb = new Lehrveranstaltung("Mathe3 Übung", 0, 3, false, 0, 0);
 
-        Modul datenbank = new Modul("Datenbanken", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul datenbank = new Modul("Datenbanken", 6, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("Datenbankstrukturen"),
                 Arrays.asList(datenbankVorl, datenbankPrak), "WiSe", 3);
-        Modul prog3 = new Modul("Prog3", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul prog3 = new Modul("Prog3", 6, false, 0, Arrays.asList(""), Arrays.asList("Python","C"),
                 Arrays.asList(prog3Vorl, prog3Prak), "WiSe", 3);
-        Modul eibo = new Modul("Eibo", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul eibo = new Modul("Eibo", 6, false, 0, Arrays.asList("Java Entwicklung"), Arrays.asList("JavaFX"),
                 Arrays.asList(eiboVorl, eiboPrak), "WiSe", 3);
-        Modul afs = new Modul("AFS", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul afs = new Modul("AFS", 6, false, 0, Arrays.asList("logisches Denken"), Arrays.asList(""),
                 Arrays.asList(afsVorl, afsUeb), "WiSe", 3);
-        Modul mathe3 = new Modul("mathe3", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul mathe3 = new Modul("mathe3", 6, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("logisches Denken","Wahrscheinlichkeitsrechnung"),
                 Arrays.asList(mathe3Vorl, mathe3Ueb), "WiSe", 3);
 
         module.clear();
@@ -113,15 +113,15 @@ public class InitStudiengang {
         Lehrveranstaltung rechnerneztVorl = new Lehrveranstaltung("Rechnernetze Vorlesung", 3, 4, false, 0, 0);
         Lehrveranstaltung rechnernetzPrak = new Lehrveranstaltung("Rechnernetze Praktikum", 3, 4, false, 0, 0);
 
-        Modul swt = new Modul("Softwaretechnik", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul swt = new Modul("Softwaretechnik", 6, false, 0, Arrays.asList(""), Arrays.asList("Planung von Projekten"),
                 Arrays.asList(swtVorl, swtPrak), "SoSe", 4);
-        Modul web = new Modul("Webanwendungen", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul web = new Modul("Webanwendungen", 6, false, 0, Arrays.asList("HTML","CSS","Java Entwicklung"), Arrays.asList("Springframework","vue"),
                 Arrays.asList(webVorl, webPrak), "SoSe", 4);
-        Modul animation = new Modul("Animation", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul animation = new Modul("Animation", 6, false, 0, Arrays.asList("gestalterische Grundlagen"), Arrays.asList("Animationsgrundlagen"),
                 Arrays.asList(animationVorl, animationPrak), "SoSe", 4);
-        Modul cg = new Modul("Computergrafik", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul cg = new Modul("Computergrafik", 6, false, 0, Arrays.asList("Python","Lineare Algebra"), Arrays.asList("Rendern von Objekten"),
                 Arrays.asList(cgVorl, cgPrak), "SoSe", 4);
-        Modul rechnernetz = new Modul("Rechnernetze", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul rechnernetz = new Modul("Rechnernetze", 6, false, 0, Arrays.asList("Java Entwicklung"), Arrays.asList("Server-Client-Verbindungen"),
                 Arrays.asList(rechnerneztVorl, rechnernetzPrak), "SoSe", 4);
 
         module.clear();
@@ -139,9 +139,9 @@ public class InitStudiengang {
         Lehrveranstaltung wpKlVorl = new Lehrveranstaltung("Wp klein Vorlesung", 3, 5, false, 0, 0);
         Lehrveranstaltung wpKlPrak = new Lehrveranstaltung("Wp klein Praktikum", 2, 5, false, 0, 0);
 
-        Modul swtproj = new Modul("Softwaretechnik Projekt", 10, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul swtproj = new Modul("Softwaretechnik Projekt", 10, false, 0, Arrays.asList("Planung von Projekten","vue","Springframework"), Arrays.asList(""),
                 Arrays.asList(swtprojVorl, swtprojPrak), "WiSe", 5);
-        Modul mci = new Modul("Mensch Computer Interaktion", 6, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul mci = new Modul("Mensch Computer Interaktion", 6, false, 0, Arrays.asList("Java Entwicklung"), Arrays.asList("umgebungsinteraktive Anwendungen"),
                 Arrays.asList(mciVorl, mciPrak), "WiSe", 5);
         Modul wpGr = new Modul("Wp gross", 10, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(wpGrVorl, wpGrPrak), "immer", 5);
@@ -155,7 +155,7 @@ public class InitStudiengang {
 
         //6.Sem
         Lehrveranstaltung berufspraktlehr = new Lehrveranstaltung("Berufspraktikum", 30, 6, false, 0, 0);
-        Modul berufspraktmod = new Modul("Berufspraktikum", 30, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul berufspraktmod = new Modul("Berufspraktikum", 30, false, 0, Arrays.asList(""), Arrays.asList("Berufserfahrung"),
                 Arrays.asList(berufspraktlehr), "immer", 6);
 
         module.clear();

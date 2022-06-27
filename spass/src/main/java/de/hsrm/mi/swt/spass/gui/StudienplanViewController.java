@@ -23,6 +23,7 @@ public class StudienplanViewController extends ViewController{
     private Label name;
     private ListView<Semester> semester;
     private Button semHinzufuegen;
+    private Button semTrim;
 
     public StudienplanViewController(Main main){
         
@@ -33,6 +34,7 @@ public class StudienplanViewController extends ViewController{
         this.name = view.getName();
         this.semester = view.getSemesterListe();
         this.semHinzufuegen = view.getSemHinzuButton();
+        this.semTrim = view.getSemTrim();
 
         rootView = view;
 
@@ -59,14 +61,11 @@ public class StudienplanViewController extends ViewController{
         semester.setCellFactory(sem -> new SemesterViewController(main));
 
         semHinzufuegen.setOnAction(e -> {
-            studienplaner.getStudiengang().getSemester().add(
-                new Semester(
-                    studienplaner.getStudiengang().getSemester().size() + 1,
-                    0,
-                    false,
-                    new ArrayList<>()
-                )
-            );
+            studienplaner.getStudiengang().semesterHinzufuegen();
+        });
+
+        semTrim.setOnAction(e -> {
+            studienplaner.getStudiengang().trimSemester();
         });
 
         //Studiengang laden
