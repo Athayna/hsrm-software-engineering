@@ -14,13 +14,13 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 public class StudienplanServiceImpl implements StudienplanService {
 
     @Override
-    public Studiengang studienplanLaden(String studiengangName) {
+    public Studiengang studienplanLaden(String path) {
         
         Gson gson = new Gson();
 
         SaveLoadKlassen helpMe = new SaveLoadKlassen();
 
-        String path = "src/main/resources/"+ studiengangName + ".json";
+        //String path = "src/main/resources/"+ studiengangName + ".json";
 
         String content = "";
         try {

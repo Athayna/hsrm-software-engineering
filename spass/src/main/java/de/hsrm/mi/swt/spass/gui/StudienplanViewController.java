@@ -2,12 +2,16 @@ package de.hsrm.mi.swt.spass.gui;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import de.hsrm.mi.swt.spass.Main;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 
 
@@ -38,6 +42,17 @@ public class StudienplanViewController extends ViewController{
 
 	@Override
 	public void initialize() {
+
+        datei.addEventHandler(ActionEvent.ACTION, event -> {
+            final FileChooser fileChooser = new FileChooser();
+            fileChooser.getExtensionFilters().add(new ExtensionFilter("JSON Files", "*.json"));
+            final File selectedFile = fileChooser.showOpenDialog(main.getStage());
+            if (selectedFile != null) {
+                
+                studienplaner.ladePlan(selectedFile.getAbsolutePath());
+
+            }
+        });
 		
         name.setText(studienplaner.getStudiengang().getName());
         semester.setItems(studienplaner.getStudiengang().getSemester());

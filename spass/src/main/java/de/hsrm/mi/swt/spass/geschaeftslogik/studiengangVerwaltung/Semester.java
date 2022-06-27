@@ -1,4 +1,5 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung;
+import java.util.ArrayList;
 import java.util.List;
 
 import javafx.beans.property.SimpleBooleanProperty;
@@ -60,6 +61,17 @@ public class Semester{
         this.module = module;
     }
 
-    
+    public void loescheModul(String modulname){
+        Modul tempModul = null;
+        for(Modul m : module){
+            	if(m.getName().equals(modulname)){
+                    tempModul = m;
+                    break;
+                }
+        }
+
+        System.out.println(tempModul.getName());
+        module.remove(tempModul);
+    }
 
 }

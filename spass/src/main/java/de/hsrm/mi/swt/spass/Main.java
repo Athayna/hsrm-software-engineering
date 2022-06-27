@@ -56,7 +56,8 @@ public class Main extends Application {
 		SemesterViewController semViewCon = new SemesterViewController(this);
         //scene.getStylesheets().add(getClass().getResource("file:///" +"C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css").toExternalForm());
 		scene.getStylesheets().clear();
-		scene.getStylesheets().add("file:///C:/Users/kevin/VSCode/Repos/Softwaretechnik/spass/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
+		scene.getStylesheets().add("file:///C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
+		//scene.getStylesheets().add("file:///C:/Users/kevin/VSCode/Repos/Softwaretechnik/spass/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
 		//scene.getStylesheets().add("file:///./src/main/java/de/hsrm/mi/swt/spass/style.css");
 
 	

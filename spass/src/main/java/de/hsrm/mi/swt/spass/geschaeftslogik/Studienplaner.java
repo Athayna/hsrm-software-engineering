@@ -21,7 +21,11 @@ public class Studienplaner {
 
 
     public Studienplaner(){
-        studiengang = helper.studienplanLaden("Medieninformatik");
+        studiengang = helper.studienplanLaden("src/main/resources/Medieninformatik.json");
+    }
+
+    public void ladePlan(String path){
+        studiengang = helper.studienplanLaden(path);
     }
 
     public Studiengang getStudiengang(){

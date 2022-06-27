@@ -1,28 +1,45 @@
 package de.hsrm.mi.swt.spass.gui;
 
-import de.hsrm.mi.swt.spass.Main;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
+import java.beans.EventHandler;
 
+import javax.swing.plaf.basic.BasicTreeUI.MouseHandler;
+
+import de.hsrm.mi.swt.spass.Main;
+import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
-
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class ModulViewController extends ListCell<Modul>{
     
+    private HBox reihe;
     private VBox box;
     private Label name;
+    private Button loeschen;
     private Label cp;
     private Main main;
+    private Studienplaner studienplaner;
     private ModulView view;
+    private int semZahl;
 
-    public ModulViewController(Main main){
+    public ModulViewController(Main main, int semZahl){
 
         this.main = main;
+        this.studienplaner = main.getStudienplaner();
         this.view = new ModulView();
         this.box = view.getBox();
         this.name = view.getName();
         this.cp = view.getCp();
+        this.reihe = view.getReihe();
+        this.loeschen = view.getLoeschen();
+        this.semZahl = semZahl;
+
+        loeschen.setOnAction(e -> {
+            studienplaner.getStudiengang().getSemester().get(semZahl-1).loescheModul(name.getText());
+        });
 
     }
 
