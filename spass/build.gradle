@@ -25,6 +25,6 @@ dependencies {
 }
 
 // Initialisierung für JUnit-Testing
-test {
+tasks.named('test') {
     useJUnitPlatform()
 }
