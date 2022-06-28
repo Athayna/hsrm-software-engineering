@@ -34,6 +34,19 @@ public class TestStudiengangverwaltung {
         Studiengang studiengang = new Studiengang("test", 10, 1, false, Arrays.asList(semester), 2, 10, Arrays.asList(""));
 
         studiengang.semesterHinzufuegen();
-        assertThat(studiengang.)
+        assertThat(studiengang.semester.size(),equalTo(2));
+    }
+
+    @Test
+    @Displayname("Semester loeschen")
+    public void semesterTrimTest(){
+        module.addAll(mathe1,prog1);
+        Semester semester = new Semester(1, 30, false,module);
+        Studiengang studiengang = new Studiengang("test", 10, 1, false, Arrays.asList(semester), 2, 10, Arrays.asList(""));
+        studiengang.semesterHinzufuegen();
+        studiengang.semesterHinzufuegen();
+        studiengang.trimSemester();
+        assertThat(studiengang.semester.size(),equalTo(2));
+
     }
 }

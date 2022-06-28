@@ -5,6 +5,7 @@ import java.util.List;
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanServiceImpl;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateError;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateFortschrittsregel;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzen;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzenError;
@@ -14,9 +15,9 @@ public class Studienplaner {
 
     private Studiengang studiengang;
     private StudienplanServiceImpl helper= new StudienplanServiceImpl();
-    private ValidateFortschrittsregel val1 = new ValidateFortschrittsregel();
-    private ValidateKompetenzen val2 = new ValidateKompetenzen();
-    private ValidateSemesterAngebot val3 = new ValidateSemesterAngebot();
+    private ValidateFortschrittsregel valFort = new ValidateFortschrittsregel();
+    private ValidateKompetenzen valKomp = new ValidateKompetenzen();
+    private ValidateSemesterAngebot valSem = new ValidateSemesterAngebot();
 
     //private StudienplanServiceImpl simple = new StudienplanServiceImpl();
 
@@ -54,12 +55,12 @@ public class Studienplaner {
         return false;
     }
 
-    private boolean checkForDnD(Modul modul, int zielSemester, int ausgangsSemester) throws ValidateKompetenzenError{
+    private boolean checkForDnD(Modul modul, int zielSemester, int ausgangsSemester) throws ValidateError{
         if(
-        val1.validateState(studiengang, modul, zielSemester) &&
-        val3.validateState(studiengang, modul, zielSemester)
+        valFort.validateState(studiengang, modul, zielSemester, ausgangsSemester) &&
+        valSem.validateState(studiengang, modul, zielSemester)
         ){
-            val2.validateState(studiengang, modul, zielSemester, ausgangsSemester);
+            valKomp.validateState(studiengang, modul, zielSemester, ausgangsSemester);
             return true;
         }
         return false;
