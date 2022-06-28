@@ -4,9 +4,12 @@ import de.hsrm.mi.swt.spass.Main;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzenError;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.HBox;
 
 import java.util.ArrayList;
@@ -63,7 +66,15 @@ public class SemesterViewController extends ListCell<Semester> {
                 modulName += tempList.get(i) + " ";
             }
             modulName = modulName.trim(); // was lernen wir aus dieser Funktion? Das Python viel mehr Komfort bietet.
-            studienplaner.dragAndDrop(modulName, ausgangsSemester, zielSemester);
+            try{
+                studienplaner.dragAndDrop(modulName, ausgangsSemester, zielSemester);
+            }catch(ValidateKompetenzenError e){
+                Alert alert = new Alert(AlertType.NONE);
+                alert.setAlertType(AlertType.INFORMATION);
+                alert.setContentText(e.getMessage());
+                alert.setHeight(300.0);
+                alert.show();
+            }
         });
 
     }
