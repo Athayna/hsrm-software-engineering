@@ -1,7 +1,10 @@
 package de.hsrm.mi.swt.spass;
 
 import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.annotation.Testable; 
+import org.junit.platform.commons.annotation.Testable;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import java.util.Arrays;
 
@@ -12,13 +15,8 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.Arrays;
-
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Lehrveranstaltung;
-
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.annotation.Testable;
+
 
 @Testable
 public class TestStudiengangverwaltung {
@@ -39,9 +37,9 @@ public class TestStudiengangverwaltung {
     public void loescheModulTest(){
         module.addAll(mathe1,prog1);
         Semester semester = new Semester(1, 30, false,module);
-        semester.loescheModul(mathe1);
+        semester.loescheModul(mathe1.getName());
         for (Modul modul : semester.getModule()) {
-        assertThat(modul.getName(),not(equalTo("mathe1")));
+        assertNotEquals(modul.getName(),"mathe1");
         }
     }
 
@@ -50,10 +48,10 @@ public class TestStudiengangverwaltung {
     public void semesterAddTest(){
         module.addAll(mathe1,prog1);
         Semester semester = new Semester(1, 30, false,module);
-        Studiengang studiengang = new Studiengang("test", 10, 1, false, Arrays.asList(semester), 2, 10, Arrays.asList(""));
+        Studiengang studiengang = new Studiengang("test", 10, 1, "B.o.S.", Arrays.asList(semester), 2, 10, Arrays.asList(""));
 
         studiengang.semesterHinzufuegen();
-        assertThat(studiengang.getSemester().size(),equalTo(2));
+        assertEquals(studiengang.getSemester().size(), 2);
     }
 
     @Test
@@ -61,11 +59,11 @@ public class TestStudiengangverwaltung {
     public void semesterTrimTest(){
         module.addAll(mathe1,prog1);
         Semester semester = new Semester(1, 30, false,module);
-        Studiengang studiengang = new Studiengang("test", 10, 1, false, Arrays.asList(semester), 2, 10, Arrays.asList(""));
+        Studiengang studiengang = new Studiengang("test", 10, 1, "B.o.S.", Arrays.asList(semester), 2, 10, Arrays.asList(""));
         studiengang.semesterHinzufuegen();
         studiengang.semesterHinzufuegen();
         studiengang.trimSemester();
-        assertThat(studiengang.getSemester().size(),equalTo(2));
+        assertEquals(studiengang.getSemester().size(), 1);
 
     }
 }

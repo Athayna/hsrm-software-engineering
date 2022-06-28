@@ -1,9 +1,12 @@
 package de.hsrm.mi.swt.spass;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.annotation.Testable;
 
-import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
+import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanServiceImpl;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 
 @Testable
 public class TestLogik {
@@ -11,8 +14,8 @@ public class TestLogik {
     //.studienplanLaden("src/main/resources/Medieninformatik.json")
     @Test
     void testStudienplanServiceInit_ladePlan(){
-        Studienplaner studienplaner = new Studienplaner();
-        assertThat(studienplaner.ladePlan("src/main/resources/Medieninformatik.json") instanceof Studiengang);
+        StudienplanServiceImpl helper = new StudienplanServiceImpl();
+        assertTrue(helper.studienplanLaden("src/main/resources/Medieninformatik.json") instanceof Studiengang);
     }
 
 
