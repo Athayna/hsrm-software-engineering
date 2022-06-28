@@ -20,7 +20,6 @@ public class ValidateFortschrittsregel {
         } else if (ausgangsSemester < zielSemester) {
             for (int i = zielSemester - 1; i > ausgangsSemester; i--) {
                 for (Modul m : studiengang.getSemester().get(i).getModule()) {
-                    System.out.println(m.getOrginalSemester() + " " + modul.getOrginalSemester() + " " + studiengang.getFortschrittsregel());
                     if (m.getOrginalSemester() >= (modul.getOrginalSemester() + studiengang.getFortschrittsregel())) {
                         String msg = "Im " + zielSemester + ". Semester befinden sich Kurse, die ein fruehreres belegen von " + modul.getName() + " vorraussetzten.";
                         throw new ValidateFortschrittsregelError(msg); 
