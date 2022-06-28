@@ -9,6 +9,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 import de.hsrm.mi.swt.spass.Main;
+import de.hsrm.mi.swt.spass.Main.Scenes;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import javafx.event.ActionEvent;
@@ -50,9 +51,10 @@ public class StudienplanViewController extends ViewController{
             fileChooser.getExtensionFilters().add(new ExtensionFilter("JSON Files", "*.json"));
             final File selectedFile = fileChooser.showOpenDialog(main.getStage());
             if (selectedFile != null) {
-                
                 studienplaner.ladePlan(selectedFile.getAbsolutePath());
-
+                name.setText(studienplaner.getStudiengang().getName());
+                semester.setItems(studienplaner.getStudiengang().getSemester());
+                semester.setCellFactory(sem -> new SemesterViewController(main));
             }
         });
 		
