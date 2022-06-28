@@ -14,58 +14,65 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.Vali
 public class Studienplaner {
 
     private Studiengang studiengang;
-    private StudienplanServiceImpl helper= new StudienplanServiceImpl();
+    private StudienplanServiceImpl helper = new StudienplanServiceImpl();
     private ValidateFortschrittsregel valFort = new ValidateFortschrittsregel();
     private ValidateKompetenzen valKomp = new ValidateKompetenzen();
     private ValidateSemesterAngebot valSem = new ValidateSemesterAngebot();
 
-    //private StudienplanServiceImpl simple = new StudienplanServiceImpl();
+    // private StudienplanServiceImpl simple = new StudienplanServiceImpl();
 
-
-    public Studienplaner(){
+    public Studienplaner() {
         studiengang = helper.studienplanLaden("src/main/resources/Medieninformatik.json");
     }
 
-    public void ladePlan(String path){
+    public void ladePlan(String path) {
         studiengang = helper.studienplanLaden(path);
     }
 
-    public Studiengang getStudiengang(){
+    public Studiengang getStudiengang() {
         return studiengang;
     }
 
-    public boolean dragAndDrop(String modulName,int ausgangsSemester, int zielSemester){
-        
-        List<Modul> ausgangsSemesterModule = studiengang.getSemester().get(ausgangsSemester-1).getModule();
+    public boolean dragAndDrop(String modulName, int ausgangsSemester, int zielSemester) throws ValidateError {
+
+        List<Modul> ausgangsSemesterModule = studiengang.getSemester().get(ausgangsSemester - 1).getModule();
         Modul modul = null;
         for (Modul mod : ausgangsSemesterModule) {
-            if(mod.getName().equals(modulName)){
+            if (mod.getName().equals(modulName)) {
                 modul = mod;
                 break;
             }
         }
         // add modul to its new semester, removes it of the old one
-        if(checkForDnD(modul, zielSemester, ausgangsSemester) && modul != null){
-            studiengang.getSemester().get(zielSemester-1).getModule().add(modul);
-            studiengang.getSemester().get(ausgangsSemester-1).getModule().remove(modul);
-            System.out.println("Drag erfolgreich \n");
-            return true;
+
+        if (modul != null) {
+            try {
+                if (checkForDnD(modul, zielSemester, ausgangsSemester)) {
+                    studiengang.getSemester().get(zielSemester - 1).getModule().add(modul);
+                    studiengang.getSemester().get(ausgangsSemester - 1).getModule().remove(modul);
+                    System.out.println("Drag erfolgreich \n");
+                }
+            } catch (ValidateKompetenzenError e) {
+                studiengang.getSemester().get(zielSemester - 1).getModule().add(modul);
+                studiengang.getSemester().get(ausgangsSemester - 1).getModule().remove(modul);
+                System.out.println("Drag erfolgreich, mit Fehler \n");
+                throw e;
+
+            } catch (ValidateError e) {
+                throw e;
+            }
         }
-        System.out.println("Drag nicht erfolgreich \n");
         return false;
+
     }
 
-    private boolean checkForDnD(Modul modul, int zielSemester, int ausgangsSemester) throws ValidateError{
-        if(
-        valFort.validateState(studiengang, modul, zielSemester, ausgangsSemester) &&
-        valSem.validateState(studiengang, modul, zielSemester)
-        ){
+    private boolean checkForDnD(Modul modul, int zielSemester, int ausgangsSemester) throws ValidateError {
+        if (valFort.validateState(studiengang, modul, zielSemester, ausgangsSemester) &&
+                valSem.validateState(studiengang, modul, zielSemester)) {
             valKomp.validateState(studiengang, modul, zielSemester, ausgangsSemester);
             return true;
         }
         return false;
     }
 
-
-    
 }
