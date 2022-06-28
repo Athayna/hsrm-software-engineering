@@ -6,10 +6,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 
 import java.io.File;
-import java.util.ArrayList;
 
 import de.hsrm.mi.swt.spass.Main;
-import de.hsrm.mi.swt.spass.Main.Scenes;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import javafx.event.ActionEvent;

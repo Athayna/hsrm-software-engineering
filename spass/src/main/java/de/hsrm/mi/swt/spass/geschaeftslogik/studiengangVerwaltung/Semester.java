@@ -1,5 +1,4 @@
 package de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung;
-import java.util.ArrayList;
 import java.util.List;
 
 import javafx.beans.property.SimpleBooleanProperty;

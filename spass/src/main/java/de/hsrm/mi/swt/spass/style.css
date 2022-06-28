@@ -116,7 +116,7 @@
 #modulBoxName{
     -fx-text-fill: black;
     -fx-font-size: 11pt;
-    -fx-padding: 4px 2px 4px 0px;
+    -fx-padding: 4px 2px 10px 0px;
 }
 
 #modulCpBox{
@@ -125,6 +125,17 @@
     -fx-padding: 0px 0px 0px 30px;
 }
 
-#semHinzuButton{
-    -fx-pref-width: 300px;
+#loescheModul{
+    -fx-pref-height: 25px;
+    -fx-pref-width: 25px;
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-background-color: rgba(202, 20, 20, 0.3);
+}
+
+#semHinzuButton, #semTrim{
+    -fx-pref-width: 200px;
+}
+
+#untenButtonReihe{
+    -fx-alignment: center;
 }

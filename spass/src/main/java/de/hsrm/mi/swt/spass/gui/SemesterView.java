@@ -52,6 +52,4 @@ public class SemesterView extends ListCell<Semester>{
         this.module = module;
     }
 
-    
-    
 }

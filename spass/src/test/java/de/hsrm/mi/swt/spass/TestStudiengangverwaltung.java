@@ -1,5 +1,17 @@
-//Semester
-//Studiengang
+package de.hsrm.mi.swt.spass.geschaeftslogik;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.annotation.Testable; 
+
+import java.util.Arrays;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Lehrveranstaltung;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 @Testable
 public class TestStudiengangverwaltung {
@@ -21,7 +33,7 @@ public class TestStudiengangverwaltung {
         module.addAll(mathe1,prog1);
         Semester semester = new Semester(1, 30, false,module);
         semester.loescheModul(mathe1);
-        for (Modul modul : semester) {
+        for (Modul modul : semester.getModule()) {
         assertThat(modul.getName(),not(equalTo("mathe1")));
         }
     }
@@ -34,7 +46,7 @@ public class TestStudiengangverwaltung {
         Studiengang studiengang = new Studiengang("test", 10, 1, false, Arrays.asList(semester), 2, 10, Arrays.asList(""));
 
         studiengang.semesterHinzufuegen();
-        assertThat(studiengang.semester.size(),equalTo(2));
+        assertThat(studiengang.getSemester().size(),equalTo(2));
     }
 
     @Test
@@ -46,7 +58,7 @@ public class TestStudiengangverwaltung {
         studiengang.semesterHinzufuegen();
         studiengang.semesterHinzufuegen();
         studiengang.trimSemester();
-        assertThat(studiengang.semester.size(),equalTo(2));
+        assertThat(studiengang.getSemester().size(),equalTo(2));
 
     }
 }

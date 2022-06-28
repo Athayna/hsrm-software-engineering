@@ -2,8 +2,6 @@ package de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer;
 
 import java.util.List;
 
-import javax.sql.rowset.spi.SyncResolver;
-
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 

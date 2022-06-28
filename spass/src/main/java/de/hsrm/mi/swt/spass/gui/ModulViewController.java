@@ -1,9 +1,5 @@
 package de.hsrm.mi.swt.spass.gui;
 
-import java.beans.EventHandler;
-
-import javax.swing.plaf.basic.BasicTreeUI.MouseHandler;
-
 import de.hsrm.mi.swt.spass.Main;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;

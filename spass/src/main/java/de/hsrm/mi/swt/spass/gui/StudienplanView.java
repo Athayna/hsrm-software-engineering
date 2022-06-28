@@ -34,12 +34,15 @@ public class StudienplanView extends Pane{
         semester.setId("semesterListe");
         semester.setOrientation(Orientation.VERTICAL);
 
+        HBox reihe = new HBox();
+        reihe.setId("untenButtonReihe");
         semHinzufuegen = new Button("Semester hinzufuegen");
         semHinzufuegen.setId("semHinzuButton");
         semTrim = new Button("Leer-Semester entfernen");
         semTrim.setId("semTrim");
+        reihe.getChildren().addAll(semHinzufuegen, semTrim);
 
-        szene.getChildren().addAll(topleiste, semester, semHinzufuegen, semTrim);
+        szene.getChildren().addAll(topleiste, semester, reihe);
 
         this.getChildren().addAll(szene);
 

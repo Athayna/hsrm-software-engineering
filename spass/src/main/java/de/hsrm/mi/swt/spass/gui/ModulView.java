@@ -24,6 +24,7 @@ public class ModulView extends ListCell<Modul>{
         name = new Label("Modul");
         name.setId("modulBoxName");
         loeschen = new Button("X");
+        loeschen.setId("loescheModul");
         reihe.getChildren().addAll(name, loeschen);
 
         cp = new Label("0");
