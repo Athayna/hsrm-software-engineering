@@ -7,6 +7,7 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateFortschrittsregel;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzen;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzenError;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateSemesterAngebot;
 
 public class Studienplaner {
@@ -53,12 +54,12 @@ public class Studienplaner {
         return false;
     }
 
-    private boolean checkForDnD(Modul modul, int zielSemester, int ausgangsSemester){
+    private boolean checkForDnD(Modul modul, int zielSemester, int ausgangsSemester) throws ValidateKompetenzenError{
         if(
         val1.validateState(studiengang, modul, zielSemester) &&
-        val2.validateState(studiengang, modul, zielSemester, ausgangsSemester) &&
         val3.validateState(studiengang, modul, zielSemester)
         ){
+            val2.validateState(studiengang, modul, zielSemester, ausgangsSemester);
             return true;
         }
         return false;

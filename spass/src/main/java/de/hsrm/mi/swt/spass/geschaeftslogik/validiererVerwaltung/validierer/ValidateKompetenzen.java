@@ -10,7 +10,7 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 public class ValidateKompetenzen {
     
 
-    public boolean validateState(Studiengang studiengang, Modul modul, int zielSemester, int ausgangsSemester) {
+    public boolean validateState (Studiengang studiengang, Modul modul, int zielSemester, int ausgangsSemester) throws ValidateKompetenzenError {
         System.out.println(ausgangsSemester + " " + zielSemester);
         if (zielSemester < ausgangsSemester) {
             List<String> geforderteKompetenzen = modul.getGeforderteKompetenzen();
@@ -24,8 +24,9 @@ public class ValidateKompetenzen {
                         }
                     }
                 }
-                System.out.println("Fehlende Kompetenzen");
-                return false;
+                String msg = "Für das Modul " + modul +" ist zu dem Zeitpunkt noch nicht die Kompetenz '" + gefordertekompetenz +"' erfüllt.";
+                throw new ValidateKompetenzenError(msg);
+                
             }
         } else if(ausgangsSemester < zielSemester){
             List<String> kompetenzen = modul.getKompetenzen();
@@ -42,8 +43,8 @@ public class ValidateKompetenzen {
                                 if(m.getName().equals(modul.getName())){
                                     continue;
                                 }
-                                System.out.println("Kompetenzabhaengigkeit verletzt");
-                                return false;
+                                String msg = "Das Modul " + m.getName() +" ist abhänig von " + modul +" da es die Kompetenz '" + geforderteKompetenz + "' enthält";
+                                throw new ValidateKompetenzenError(msg);
                             }
                         }
                     }
