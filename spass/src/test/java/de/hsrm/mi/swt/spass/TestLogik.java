@@ -1,12 +1,9 @@
-import static org.assertj.core.api.Assertions.assertThat;
+package de.hsrm.mi.swt.spass;
 
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.annotation.Testable;
 
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
-
-//Datenverwaltung Impl 
-//Studienplaner
 
 @Testable
 public class TestLogik {

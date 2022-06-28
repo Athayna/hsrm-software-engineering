@@ -1,17 +1,24 @@
-package de.hsrm.mi.swt.spass.geschaeftslogik;
-
-import static org.assertj.core.api.Assertions.assertThat;
+package de.hsrm.mi.swt.spass;
 
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.annotation.Testable; 
 
 import java.util.Arrays;
+
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Lehrveranstaltung;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+
+import java.util.Arrays;
+
+import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Lehrveranstaltung;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.annotation.Testable;
 
 @Testable
 public class TestStudiengangverwaltung {
@@ -28,7 +35,7 @@ public class TestStudiengangverwaltung {
     
 
     @Test
-    @Displayname("Modul loeschen")
+    @DisplayName("Modul loeschen")
     public void loescheModulTest(){
         module.addAll(mathe1,prog1);
         Semester semester = new Semester(1, 30, false,module);
@@ -39,7 +46,7 @@ public class TestStudiengangverwaltung {
     }
 
     @Test
-    @Displayname("Semester hinzufuegen")
+    @DisplayName("Semester hinzufuegen")
     public void semesterAddTest(){
         module.addAll(mathe1,prog1);
         Semester semester = new Semester(1, 30, false,module);
@@ -50,7 +57,7 @@ public class TestStudiengangverwaltung {
     }
 
     @Test
-    @Displayname("Semester loeschen")
+    @DisplayName("Semester loeschen")
     public void semesterTrimTest(){
         module.addAll(mathe1,prog1);
         Semester semester = new Semester(1, 30, false,module);

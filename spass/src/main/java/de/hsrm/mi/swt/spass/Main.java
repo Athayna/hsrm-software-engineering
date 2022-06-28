@@ -60,7 +60,7 @@ public class Main extends Application {
 		//scene.getStylesheets().add("file:///C:/Users/kevin/VSCode/Repos/Softwaretechnik/spass/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
 
 		//scene.getStylesheets().add("file:///C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
-		//scene.getStylesheets().add("file:///C:/Users/kevin/VSCode/Repos/Softwaretechnik/spass/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
+		scene.getStylesheets().add("file:///C:/Users/kevin/VSCode/Repos/Softwaretechnik/spass/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
 		//scene.getStylesheets().add("file:///./src/main/java/de/hsrm/mi/swt/spass/style.css");
 
 	

@@ -4,6 +4,8 @@ import de.hsrm.mi.swt.spass.Main;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Modul;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateError;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateFortschrittsregelError;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzenError;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -62,15 +64,19 @@ public class SemesterViewController extends ListCell<Semester> {
             List<String> tempList = new ArrayList<>();
             tempList = Arrays.asList(dndDaten);
             String modulName = "";
-            for (int i = 1; i< tempList.size(); i++) {
+            for (int i = 1; i < tempList.size(); i++) {
                 modulName += tempList.get(i) + " ";
             }
             modulName = modulName.trim(); // was lernen wir aus dieser Funktion? Das Python viel mehr Komfort bietet.
-            try{
+            try {
                 studienplaner.dragAndDrop(modulName, ausgangsSemester, zielSemester);
-            }catch(ValidateKompetenzenError e){
+            } catch (ValidateError e) {
                 Alert alert = new Alert(AlertType.NONE);
-                alert.setAlertType(AlertType.INFORMATION);
+                if (e instanceof ValidateKompetenzenError) {
+                    alert.setAlertType(AlertType.WARNING);
+                } else {
+                    alert.setAlertType(AlertType.ERROR);
+                }
                 alert.setContentText(e.getMessage());
                 alert.setHeight(300.0);
                 alert.show();
