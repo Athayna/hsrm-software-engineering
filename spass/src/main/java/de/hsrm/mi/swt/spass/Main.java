@@ -3,11 +3,8 @@ package de.hsrm.mi.swt.spass;
 import java.util.HashMap;
 import java.util.Map;
 
-import de.hsrm.mi.swt.spass.geschaeftslogik.InitStudiengang;
 import de.hsrm.mi.swt.spass.geschaeftslogik.Studienplaner;
-import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanService;
 import de.hsrm.mi.swt.spass.geschaeftslogik.datenverwaltung.StudienplanServiceImpl;
-import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Studiengang;
 import de.hsrm.mi.swt.spass.gui.SemesterViewController;
 import de.hsrm.mi.swt.spass.gui.StudienplanViewController;
 import de.hsrm.mi.swt.spass.gui.ViewController;
@@ -32,6 +29,8 @@ public class Main extends Application {
     private Scene scene;
     private BorderPane root;
     private Map<Scenes, Pane> scenes;
+	private final int WIDTH = 1280;
+	private final int HEIGHT = 720;
 
     public static void main(String[] args){
         launch();
@@ -42,7 +41,7 @@ public class Main extends Application {
         scenes = new HashMap<>();
         root = new BorderPane();
         root.getStyleClass().add("root");
-        scene = new Scene(root, 1280, 720);
+        scene = new Scene(root, WIDTH, HEIGHT);
 
         studienplaner = new Studienplaner();
 
@@ -51,17 +50,8 @@ public class Main extends Application {
         
         scenes.put(Scenes.PLAN_SCENE, viewController.getRootView());
 		SemesterViewController semViewCon = new SemesterViewController(this);
-        //scene.getStylesheets().add(getClass().getResource("file:///" +"C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css").toExternalForm());
-		scene.getStylesheets().clear();
-
-		scene.getStylesheets().add("file:///C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
-		//scene.getStylesheets().add("file:///C:/Users/kevin/VSCode/Repos/Softwaretechnik/spass/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
-
-		//scene.getStylesheets().add("file:///C:/Users/astri/OneDrive/Dokumente/4_Semester/Softwaretechnik/Studienplaner/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
-		scene.getStylesheets().add("file:///C:/Users/kevin/VSCode/Repos/Softwaretechnik/spass/spass/src/main/java/de/hsrm/mi/swt/spass/style.css");
-		//scene.getStylesheets().add("file:///./src/main/java/de/hsrm/mi/swt/spass/style.css");
-
-	
+        scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+		
 	}
 	
 	
@@ -72,6 +62,9 @@ public class Main extends Application {
         this.stage = stage;
 		stage.setTitle("Studienplaner");
 		stage.setScene(scene);
+		stage.setResizable(true);
+		//stage.setMinWidth(WIDTH);
+		//stage.setMinHeight(HEIGHT);
 
 		switchScene(Scenes.PLAN_SCENE);
 
@@ -99,6 +92,14 @@ public class Main extends Application {
 
 	public Scene getScene() {
 		return scene;
+	}
+
+	public int getWIDTH() {
+		return WIDTH;
+	}
+
+	public int getHEIGHT() {
+		return HEIGHT;
 	}
 
 	public void exit() {

@@ -22,7 +22,12 @@ public class ValidateKompetenzen {
                         }
                     }
                 }
-                String msg = "Für das Modul '" + modul.getName() +"'' ist zu dem Zeitpunkt noch nicht die Kompetenz '" + gefordertekompetenz +"' erfuellt.";
+                
+                String msg = "Das Modul '" + modul.getName() +"'beinhaltet die Kompetenz ";
+                for(String s : modul.getGeforderteKompetenzen()){
+                    msg += "'" + s + "' ";
+                }
+                msg += "welche in diesem Semester fuer manche Module benoetigt wird.";
                 throw new ValidateKompetenzenError(msg);
                 
             }
@@ -41,7 +46,11 @@ public class ValidateKompetenzen {
                                 if(m.getName().equals(modul.getName())){
                                     continue;
                                 }
-                                String msg = "Das Modul '" + m.getName() +"'' ist abhaenig von " + modul.getName() +" da es die Kompetenz '" + geforderteKompetenz + "' enthaelt";
+                                String msg = "Das Modul '" + modul.getName() +"' beinhaltet die Kompetenz ";
+                                for(String s : modul.getKompetenzen()){
+                                    msg += "'" + s + "' ";
+                                }
+                                msg += "welche in diesem Semester fuer manche Module benoetigt wird.";
                                 throw new ValidateKompetenzenError(msg);
                             }
                         }

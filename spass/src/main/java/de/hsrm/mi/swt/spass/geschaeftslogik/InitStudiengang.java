@@ -25,15 +25,15 @@ public class InitStudiengang {
         Lehrveranstaltung bwlVorl = new Lehrveranstaltung("BWL Vorlesung", 5, 1, false, 0, 0);
         Lehrveranstaltung bwlUeb = new Lehrveranstaltung("BWL Uebung", 0, 1, false, 0, 0);
 
-        Modul mathe1 = new Modul("Mathe1", 5, false, 0, Arrays.asList(""), Arrays.asList("logisches Denken","Mathematisches Grundverstaendnis"),
+        Modul mathe1 = new Modul("Mathe 1", 5, false, 0, Arrays.asList(""), Arrays.asList("logisches Denken","Mathematisches Grundverstaendnis"),
                 Arrays.asList(mathe1Vorl, mathe1Ueb), "WiSe", 1);
-        Modul prog1 = new Modul("Programmieren1", 7, false, 0, Arrays.asList(""), Arrays.asList("Java Grundlagen"),
+        Modul prog1 = new Modul("Programmieren 1", 7, false, 0, Arrays.asList(""), Arrays.asList("Java Grundlagen"),
                 Arrays.asList(prog1Prak, prog1Vorl), "WiSe", 1);
-        Modul eges = new Modul("Eges", 8, false, 0, Arrays.asList(""), Arrays.asList("Print Gestaltung","gestalterische Grundlagen"),
+        Modul eges = new Modul("EGes", 8, false, 0, Arrays.asList(""), Arrays.asList("Print Gestaltung","gestalterische Grundlagen"),
                 Arrays.asList(egesPrak, egesVorl), "WiSe", 1);
         Modul medieninfo = new Modul("Medieninformatik", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(miPrak, miVorl), "WiSe", 1);
-        Modul bwl = new Modul("Bwl", 5, false, 0, Arrays.asList(""), Arrays.asList(""), Arrays.asList(bwlUeb, bwlVorl),
+        Modul bwl = new Modul("BWL", 5, false, 0, Arrays.asList(""), Arrays.asList(""), Arrays.asList(bwlUeb, bwlVorl),
                 "WiSe", 1);
 
         ObservableList<Modul> module = FXCollections.observableArrayList();
@@ -57,7 +57,7 @@ public class InitStudiengang {
 
         Modul ads = new Modul("ADS", 5, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("logisches Denken","Algorithmische Verfahren"),
                 Arrays.asList(adsVorl, adsPrak), "SoSe", 2);
-        Modul prog2 = new Modul("Prog 2", 5, false, 0, Arrays.asList("Java Grundlagen"), Arrays.asList("Java Entwicklung"),
+        Modul prog2 = new Modul("Programmieren 2", 5, false, 0, Arrays.asList("Java Grundlagen"), Arrays.asList("Java Entwicklung"),
                 Arrays.asList(prog2Vorl, prog2Prak), "SoSe", 2);
         Modul azs = new Modul("AZS", 5, false, 0, Arrays.asList(""), Arrays.asList("HTML","CSS"),
                 Arrays.asList(azsVorl, azsPrak), "SoSe", 2);
@@ -87,13 +87,13 @@ public class InitStudiengang {
 
         Modul datenbank = new Modul("Datenbanken", 6, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("Datenbankstrukturen"),
                 Arrays.asList(datenbankVorl, datenbankPrak), "WiSe", 3);
-        Modul prog3 = new Modul("Prog3", 6, false, 0, Arrays.asList(""), Arrays.asList("Python","C"),
+        Modul prog3 = new Modul("Programmieren 3", 6, false, 0, Arrays.asList(""), Arrays.asList("Python","C"),
                 Arrays.asList(prog3Vorl, prog3Prak), "WiSe", 3);
         Modul eibo = new Modul("Eibo", 6, false, 0, Arrays.asList("Java Entwicklung"), Arrays.asList("JavaFX"),
                 Arrays.asList(eiboVorl, eiboPrak), "WiSe", 3);
         Modul afs = new Modul("AFS", 6, false, 0, Arrays.asList("logisches Denken"), Arrays.asList(""),
                 Arrays.asList(afsVorl, afsUeb), "WiSe", 3);
-        Modul mathe3 = new Modul("mathe3", 6, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("logisches Denken","Wahrscheinlichkeitsrechnung"),
+        Modul mathe3 = new Modul("Mathe 3", 6, false, 0, Arrays.asList("logisches Denken"), Arrays.asList("logisches Denken","Wahrscheinlichkeitsrechnung"),
                 Arrays.asList(mathe3Vorl, mathe3Ueb), "WiSe", 3);
 
         module.clear();
@@ -143,9 +143,9 @@ public class InitStudiengang {
                 Arrays.asList(swtprojVorl, swtprojPrak), "WiSe", 5);
         Modul mci = new Modul("Mensch Computer Interaktion", 6, false, 0, Arrays.asList("Java Entwicklung"), Arrays.asList("umgebungsinteraktive Anwendungen"),
                 Arrays.asList(mciVorl, mciPrak), "WiSe", 5);
-        Modul wpGr = new Modul("Wp gross", 10, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul wpGr = new Modul("Wahlpflichtfach 1", 10, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(wpGrVorl, wpGrPrak), "immer", 5);
-        Modul wpKl = new Modul("Wp klein", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
+        Modul wpKl = new Modul("Wahlpflichtfach 2", 5, false, 0, Arrays.asList(""), Arrays.asList(""),
                 Arrays.asList(wpKlVorl, wpKlPrak), "immer", 5);
 
         module.clear();

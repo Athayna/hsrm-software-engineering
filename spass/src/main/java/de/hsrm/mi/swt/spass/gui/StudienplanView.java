@@ -2,14 +2,14 @@ package de.hsrm.mi.swt.spass.gui;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import javafx.geometry.Orientation;
 import javafx.scene.control.Button;
 
-public class StudienplanView extends Pane{
+public class StudienplanView extends AnchorPane{
 
     private Button datei;
     private Label name;
@@ -17,7 +17,7 @@ public class StudienplanView extends Pane{
     private Button semHinzufuegen;
     private Button semTrim;
 
-    public StudienplanView(){
+    public StudienplanView(int width, int height){
         
         VBox szene = new VBox();
         szene.setId("szene");
@@ -45,6 +45,10 @@ public class StudienplanView extends Pane{
         szene.getChildren().addAll(topleiste, semester, reihe);
 
         this.getChildren().addAll(szene);
+        StudienplanView.setTopAnchor(szene,height*0.0);
+		StudienplanView.setBottomAnchor(szene,height*0.0);
+		StudienplanView.setLeftAnchor(szene,width*0.0);
+		StudienplanView.setRightAnchor(szene,width*0.0);
 
     }
 

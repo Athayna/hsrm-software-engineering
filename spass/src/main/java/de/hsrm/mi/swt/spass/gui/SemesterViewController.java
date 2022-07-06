@@ -7,6 +7,9 @@ import de.hsrm.mi.swt.spass.geschaeftslogik.studiengangVerwaltung.Semester;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateError;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateFortschrittsregelError;
 import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateKompetenzenError;
+import de.hsrm.mi.swt.spass.geschaeftslogik.validiererVerwaltung.validierer.ValidateSemesterAngebotError;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
@@ -38,6 +41,15 @@ public class SemesterViewController extends ListCell<Semester> {
         this.leiste = view.getLeiste();
         this.semZahl = view.getSemZahl();
         this.module = view.getModule();
+        boolean intitialize = true;
+
+        main.getScene().widthProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                module.setStyle("-fx-pref-width: "+ (newValue.intValue() - 160) + "px;");                
+            }
+        });
+
 
         module.setOnDragEntered(event -> {
             event.acceptTransferModes(TransferMode.MOVE);
@@ -78,9 +90,10 @@ public class SemesterViewController extends ListCell<Semester> {
                     alert.setAlertType(AlertType.ERROR);
                 }
                 alert.setContentText(e.getMessage());
-                alert.setHeight(300.0);
+                alert.setHeight(400.0);
                 alert.show();
             }
+
         });
 
     }
@@ -90,6 +103,7 @@ public class SemesterViewController extends ListCell<Semester> {
         super.updateItem(item, empty);
 
         if (item != null) {
+            module.setStyle("-fx-pref-width: "+ (main.getWIDTH() - 160) + "px;");
             semZahl.setText(Integer.toString(item.getZahl()));
             semZahl.setId("semZahl");
             module.setItems(studienplaner.getStudiengang().getSemester().get((item.getZahl() - 1)).getModule());

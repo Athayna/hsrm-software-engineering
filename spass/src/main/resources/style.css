@@ -45,7 +45,7 @@
 }
 
 #semesterListe{
-    -fx-pref-height: 600px;
+    -fx-min-height: 600px;
     -fx-background-color: none;
 }
 
@@ -97,7 +97,6 @@
 }
 
 #modulListe{
-    -fx-pref-width: 1050px;
 
 }
 
@@ -134,8 +133,10 @@
 
 #semHinzuButton, #semTrim{
     -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
 }
 
 #untenButtonReihe{
     -fx-alignment: center;
+    -fx-padding: 8px 0px 15px 0px;
 }
